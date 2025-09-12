@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>Skills</title>
+
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 0.45s ease-in;
+      /* duration + easing */
+    }
+
+    /* After page loads */
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body class="min-h-screen flex flex-col justify-start items-center antialiased transition-colors duration-300">
+
+  <!-- Navbar -->
+
+  <nav class="z-50 flex w-full justify-between items-start lg:justify-center lg:items-center fixed bg-white/90">
+    <!-- Contact option -->
+    <div id="contact-container" class="hidden lg:flex gap-3  justify-between items-center fixed left-6 top-6 hover:scale-105 hover:tracking-wide transition-all duration-500 ease-initial">
+      <button id="contact-button" class="text-lg active:scale-95 active:text-gray-300 transition-all duration-300" href="">Reach me</button>
+      <a href="https://www.linkedin.com/in/antormorsalin/" class="hidden text-sm  hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/linkedin.png" class="w-[22px]" alt="">
+      </a>
+      <a href="https://github.com/antor-morsalin" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/github.png" class="w-[25px]" alt="">
+      </a>
+      <a href="https://www.youtube.com/@antor_morsalin04" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/youtube.png" class="w-[25px]" alt="">
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=morsalinantor17@gmail.com" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/email.png" class="w-[22px]" alt="">
+      </a>
+
+    </div>
+
+    <!-- this will hold all the options -->
+    <div id="menu-container" class="hidden lg:flex justify-evenly items-center w-full max-w-[140px] bg-black/90 rounded-full h-[40px] m-5 transition-all duration-500 ease-in-out overflow-hidden shadow-lg">
+
+      <!-- <a class="hidden text-white text-sm px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Home</a>
+      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Skills</a>
+      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Projects</a>
+      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Academics</a> -->
+
+      <!-- Menu bar -->
+      <button id="menu-bar" class="text-white w-full px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300" href="">Menu</button>
+
+    </div>
+
+
+
+
+
+    <!-- Nav design for mobile -->
+    <div id="contact-container-mobile" class="flex flex-col gap-4 lg:hidden justify-center items-center w-full max-w-[140px] my-5 py-2 px-3 mx-3
+    transition-all duration-500 ease-in-out hover:scale-105">
+      <button id="menu-bar-mobile" class="px-3 text-white text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Menu</button>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="index.html">Home</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="skill_set.html">Skills</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="projects.html">Projects</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="academics.html">Academics</a>
+    </div>
+
+    <!-- this will hold all the options -->
+    <div id="menu-container-mobile" class="flex bg-black/90 flex-col gap-4 lg:hidden justify-evenly items-center w-full max-w-[140px] my-5 shadow-md py-2 px-3 rounded-3xl mx-8
+    transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+      <!-- Menu bar -->
+      <button id="menu-bar-mobile" class="px-3 text-white text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Menu</button>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="">Home</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="">Skills</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="">Projects</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="">Academics</a>
+    </div>
+
+  </nav>
+
+
+
+
+  <!-- main body -->
+
+  <main class="flex-1 max-w-[1920px] w-full mt-28 mb-20 px-2 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+      <!-- Web Applications -->
+      <section class="group/card relative flex flex-col rounded-2xl border border-black/10
+             bg-gradient-to-b from-white to-neutral-50 text-black
+             p-7 min-h-[340px] md:min-h-[380px]
+             shadow-[0_2px_0_rgba(0,0,0,0.05)]
+             transition-all duration-300 ease-out transform-gpu
+             hover:-translate-y-1 hover:shadow-[0_24px_80px_-24px_rgba(0,0,0,0.35)]
+             hover:border-black/20">
+
+        <!-- subtle corner vignette -->
+        <div class="pointer-events-none absolute inset-0 rounded-2xl
+                  bg-[radial-gradient(800px_400px_at_120%_-20%,rgba(0,0,0,0.06),transparent)]
+                  opacity-70"></div>
+
+        <header class="relative mb-5">
+          <h2 class="font-serif text-2xl tracking-tight">Web Applications</h2>
+          <div class="mt-3 h-px w-16 bg-gradient-to-r from-black/60 to-black/0
+                    transition-all duration-300 group-hover/card:w-24"></div>
+        </header>
+
+        <div class="relative flex flex-wrap gap-2 mb-5">
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">HTML</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">CSS</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">JavaScript</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">Tailwind CSS</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">Express.js</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">EJS Template</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">Mongoose</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">MongoDB</span>
+        </div>
+
+        <p class="relative text-sm leading-7 text-neutral-700">
+          I think becoming good at programming is more important than becoming an expert in a specific stack.
+          I’m glad I spent time getting better at core programming—it lets me pick up and apply any framework or library quickly.
+        </p>
+      </section>
+
+      <!-- Artificial Intelligence -->
+      <section class="group/card relative flex flex-col rounded-2xl border border-black/10
+             bg-gradient-to-b from-white to-neutral-50 text-black
+             p-7 min-h-[340px] md:min-h-[380px]
+             shadow-[0_2px_0_rgba(0,0,0,0.05)]
+             transition-all duration-300 ease-out transform-gpu
+             hover:-translate-y-1 hover:shadow-[0_24px_80px_-24px_rgba(0,0,0,0.35)]
+             hover:border-black/20">
+
+        <div class="pointer-events-none absolute inset-0 rounded-2xl
+                  bg-[radial-gradient(800px_400px_at_120%_-20%,rgba(0,0,0,0.06),transparent)]
+                  opacity-70"></div>
+
+        <header class="relative mb-5">
+          <h2 class="font-serif text-2xl tracking-tight">Artificial Intelligence</h2>
+          <div class="mt-3 h-px w-16 bg-gradient-to-r from-black/60 to-black/0
+                    transition-all duration-300 group-hover/card:w-24"></div>
+        </header>
+
+        <div class="relative flex flex-wrap gap-2 mb-5">
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">NumPy</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">Pandas</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">Matplotlib</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">scikit-learn</span>
+          <span class="inline-flex items-center rounded-full border border-black/20 px-3 py-1 text-xs hover:bg-black hover:text-white transition-colors">PyTorch</span>
+        </div>
+
+        <p class="relative text-sm leading-7 text-neutral-700">
+          I’ve spent a lot of time understanding the theory behind machine learning and wrote several ML models from scratch in Python.
+          For deep learning, I’m studying the foundations in depth and implementing them with PyTorch.
+        </p>
+      </section>
+
+      <!-- Others -->
+      <section class="group/card relative flex flex-col rounded-2xl border border-black/10
+             bg-gradient-to-b from-white to-neutral-50 text-black
+             p-7 min-h-[340px] md:min-h-[380px]
+             shadow-[0_2px_0_rgba(0,0,0,0.05)]
+             transition-all duration-300 ease-out transform-gpu
+             hover:-translate-y-1 hover:shadow-[0_24px_80px_-24px_rgba(0,0,0,0.35)]
+             hover:border-black/20">
+
+        <div class="pointer-events-none absolute inset-0 rounded-2xl
+                  bg-[radial-gradient(800px_400px_at_120%_-20%,rgba(0,0,0,0.06),transparent)]
+                  opacity-70"></div>
+
+        <header class="relative mb-5">
+          <h2 class="font-serif text-2xl tracking-tight">Others</h2>
+          <div class="mt-3 h-px w-16 bg-gradient-to-r from-black/60 to-black/0
+                    transition-all duration-300 group-hover/card:w-24"></div>
+        </header>
+
+        <ul class="relative space-y-2 text-sm leading-7 text-neutral-700">
+          <li class="flex items-start gap-3 transition-all hover:translate-x-0.5">
+            <span class="mt-[10px] h-[2px] w-3 bg-black/40"></span>
+            <span>Postman for testing routes, RESTful routes</span>
+          </li>
+          <li class="flex items-start gap-3 transition-all hover:translate-x-0.5">
+            <span class="mt-[10px] h-[2px] w-3 bg-black/40"></span>
+            <span>Git Bash CLI for project environments</span>
+          </li>
+          <li class="flex items-start gap-3 transition-all hover:translate-x-0.5">
+            <span class="mt-[10px] h-[2px] w-3 bg-black/40"></span>
+            <span>Notion for managing projects</span>
+          </li>
+          <li class="flex items-start gap-3 transition-all hover:translate-x-0.5">
+            <span class="mt-[10px] h-[2px] w-3 bg-black/40"></span>
+            <span>Canva for UI mockups and diagrams</span>
+          </li>
+          <li class="flex items-start gap-3 transition-all hover:translate-x-0.5">
+            <span class="mt-[10px] h-[2px] w-3 bg-black/40"></span>
+            <span>C++ for Codeforces and LeetCode</span>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+
+
+
+
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/contact.js"></script>
+</body>
+
+</html>
