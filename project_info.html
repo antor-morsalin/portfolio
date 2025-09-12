@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>Project Info</title>
+
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 0.45s ease-in;
+      /* duration + easing */
+    }
+
+    /* After page loads */
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body class="min-h-screen flex flex-col justify-start items-center antialiased transition-colors duration-300">
+
+  <!-- Navbar -->
+
+  <nav class="z-50 flex w-full justify-between items-start lg:justify-center lg:items-center fixed bg-white/90">
+    <!-- Contact option -->
+    <div id="contact-container" class="hidden lg:flex gap-3  justify-between items-center fixed left-6 top-6 hover:scale-105 hover:tracking-wide transition-all duration-500 ease-initial">
+      <button id="contact-button" class="text-lg active:scale-95 active:text-gray-300 transition-all duration-300" href="">Reach me</button>
+      <a href="https://www.linkedin.com/in/antormorsalin/" class="hidden text-sm  hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/linkedin.png" class="w-[22px]" alt="">
+      </a>
+      <a href="https://github.com/antor-morsalin" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/github.png" class="w-[25px]" alt="">
+      </a>
+      <a href="https://www.youtube.com/@antor_morsalin04" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/youtube.png" class="w-[25px]" alt="">
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=morsalinantor17@gmail.com" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
+        <img src="./assets/icons/email.png" class="w-[22px]" alt="">
+      </a>
+
+    </div>
+
+    <!-- this will hold all the options -->
+    <div id="menu-container" class="hidden lg:flex justify-evenly items-center w-full max-w-[140px] bg-black/90 rounded-full h-[40px] m-5 transition-all duration-500 ease-in-out overflow-hidden shadow-lg">
+
+      <!-- <a class="hidden text-white text-sm px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Home</a>
+      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Skills</a>
+      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Projects</a>
+      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Academics</a> -->
+
+      <!-- Menu bar -->
+      <button id="menu-bar" class="text-white w-full px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300" href="">Menu</button>
+
+    </div>
+
+
+
+
+
+    <!-- Nav design for mobile -->
+    <div id="contact-container-mobile" class="flex flex-col gap-4 lg:hidden justify-center items-center w-full max-w-[140px] my-5 py-2 px-3 mx-3
+    transition-all duration-500 ease-in-out hover:scale-105">
+      <button id="contact-button-mobile" class="text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Reach me</button>
+      <a href="https://www.linkedin.com/in/antormorsalin/" target="_blank" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Linkedin</a>
+      <a href="" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" target="_blank">Github</a>
+      <a href="https://www.youtube.com/@antor_morsalin04" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" target="_blank">YouTube</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=morsalinantor17@gmail.com" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" target="_blank">
+        Email
+      </a>
+    </div>
+
+    <!-- this will hold all the options -->
+    <div id="menu-container-mobile" class="flex bg-black/90 flex-col gap-4 lg:hidden justify-evenly items-center w-full max-w-[140px] my-5 shadow-md py-2 px-3 rounded-3xl mx-8
+    transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+      <!-- Menu bar -->
+      <button id="menu-bar-mobile" class="px-3 text-white text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Menu</button>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="index.html">Home</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="skill_set.html">Skills</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="projects.html">Projects</a>
+      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="academics.html">Academics</a>
+    </div>
+
+  </nav>
+
+
+
+
+  <!-- main body -->
+  <main class="flex-1 max-w-[1920px] w-full px-2 md:px-8 mx-auto mt-28 mb-20">
+
+    <h1 id="project-name" class="font-serif font-bold text-black tracking-tight text-3xl md:text-4xl pb-5">
+    </h1>
+
+    <a id="youtube-link" href="" target="_blank" class="group flex items-center gap-3 mb-2">
+      <p class="text-neutral-900 transition-colors duration-200
+              [background:linear-gradient(to_right,rgba(0,0,0,0.7),rgba(0,0,0,0))_left_bottom/0_1px_no-repeat]
+              group-hover:[background-size:100%_1px]">
+        Project Video on YouTube
+      </p>
+      <img src="/assets/icons/youtube.png" class="w-6 opacity-80 transition duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 filter grayscale" alt="">
+    </a>
+
+    <a id="github-link" href="" target="_blank" class="group flex items-center gap-3 mb-5">
+      <p class="text-neutral-900 transition-colors duration-200
+              [background:linear-gradient(to_right,rgba(0,0,0,0.7),rgba(0,0,0,0))_left_bottom/0_1px_no-repeat]
+              group-hover:[background-size:100%_1px]">
+        Code on GitHub
+      </p>
+      <img src="/assets/icons/github.png" class="w-6 opacity-80 transition duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 filter grayscale" alt="">
+    </a>
+
+    <div class="flex flex-wrap items-start gap-8">
+
+      <div class="relative rounded-2xl border border-black/10
+             bg-gradient-to-b from-white to-neutral-50
+             p-6 flex-1 min-w-[320px] sm:min-w-[446px]
+             shadow-[0_2px_0_rgba(0,0,0,0.05)]
+             transition-all duration-300 ease-out transform-gpu
+             hover:-translate-y-0.5 hover:shadow-[0_24px_80px_-24px_rgba(0,0,0,0.35)]">
+        <p id="info-intro" class="text-neutral-700 leading-8 mb-3">
+        </p>
+        <p id="info-insight" class="text-neutral-700 leading-8 mb-3">
+        </p>
+        <p id="info-tech-stack" class="text-neutral-900 leading-7 text-lg font-semibold">
+        </p>
+      </div>
+
+      <iframe id="project-video" class="flex-1 rounded-2xl border border-black/10
+                   shadow-[0_2px_0_rgba(0,0,0,0.05)]
+                   w-[350px] sm:min-w-[446px] h-[300px] md:h-[380px]
+                   transition-all duration-300 ease-out transform-gpu
+                   hover:-translate-y-0.5 hover:shadow-[0_24px_80px_-24px_rgba(0,0,0,0.35)]" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    </div>
+
+  </main>
+
+
+
+
+
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+  <script src="./src/js/navbar.js"></script>
+  <script src="./src/js/contact.js"></script>
+  <script src="./src/js/project_data_loader.js"></script>
+</body>
