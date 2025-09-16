@@ -24,7 +24,16 @@ const projects_data = {
         embed_link: "https://www.youtube.com/embed/T5zV3wkLKEY",
         info_intro: "For my Microprocessor and Embedded System Project, I decided to make a dual axis robotic arm that a person can control by waving and moving their hand to the direction they want to. When I was a kid, I saw a video where a fighter jet pilot was moving his head and the attached gun below the jet was following the direction of the pilot's head. It looked magnificent to me. So after learning the fundamentals of microporcessor alond with other Electrical Engineering fundamentals in the previous courses, I knew that I had to make something similar to what I saw in that video.",
         info_insight: "Although at first the idea looks really hard to implement, I problem down into several pieces. Measuring the coordinates/angles of my hand, sending them to the servo motors, setting those values to the servo motors. Now all of these individual problems are super easy to implement. To capture my coordinate/angles, I used MPU9250 but the magnetometer inside it was faulty so I ended up using it like a MPU6050. The measuring of YAW angle was a big challenge as I manually had to test it again and again, attach several filters to it intuitively to make it work. I wasn't really familiar with the mathematics of deriving roll, pitch and yaw from accelerometer and gyroscope so I had to comeup with not so efficient solution to this problem in the short time I had, but it still worked out well so I am not complaining. I recorded the angles in one ESP-32 and using ESP-NOW, I sent these values wirelessly to another ESP-32 which then set the values of the angles to the servo motors. It obviously wasn't working well at first but after a lot of debugging, testing and updating the parameters, I was happy with the final result.",
-        info_tech_stack: "I used two ESP-32 for the microprocessors, ESP-NOW for wireless transmission of the angle data and C++ to program the two ESP-32"
+        info_tech_stack: "I used two ESP-32 for the microprocessors, ESP-NOW for wireless transmission of the angle data and C++ to program the two ESP-32" 
+    },
+    ann_heart_disease: {
+        project_name: "Deep Learning (ANN) - Heart Disease Prediction",
+        youtube_link: "https://www.youtube.com/watch?v=12_ApvYADpg&ab_channel=AntorMorsalin",
+        github_link: "https://github.com/antor-morsalin/Deep-Learning-ANN---Heart-Diseases-Prediction",
+        embed_link: "https://www.youtube.com/embed/12_ApvYADpg",
+        info_intro: "This is a Deep Learning project where I have created an ANN model that predicts risks of heart attack. I have used UCI Heart Disease Dataset in order to train, test and evaluate the model.",
+        info_insight: "I have spend months learning about deep learning fundamentals, theory and so on. The goal for this project was to implement things I have learned so far. While developing the model, I ran a lot of experiments that gave me a lot of insight about deep learning. The theories and fundamentals I learned really reflected on this project.",
+        info_tech_stack: "I used PyTorch, Sklearn, Pandas, Matplotlib and Numpy for data analysis, data pre-processing, developing the ANN architecture, running experiments to determine the hyper parameters and finally evaluate and visualize and training and test accuracy of the model."
     }
 };
 
