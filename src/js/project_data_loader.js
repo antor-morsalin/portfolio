@@ -34,6 +34,24 @@ const projects_data = {
         info_intro: "This is a Deep Learning project where I have created an ANN model that predicts risks of heart attack. I have used UCI Heart Disease Dataset in order to train, test and evaluate the model.",
         info_insight: "I have spend months learning about deep learning fundamentals, theory and so on. The goal for this project was to implement things I have learned so far. While developing the model, I ran a lot of experiments that gave me a lot of insight about deep learning. The theories and fundamentals I learned really reflected on this project.",
         info_tech_stack: "I used PyTorch, Sklearn, Pandas, Matplotlib and Numpy for data analysis, data pre-processing, developing the ANN architecture, running experiments to determine the hyper parameters and finally evaluate and visualize and training and test accuracy of the model."
+    },
+    yelpcamp: {
+        project_name: "YelpCamp",
+        youtube_link: "https://www.youtube.com/watch?v=rYU3a1sizNU",
+        github_link: "https://github.com/antor-morsalin/YelpCamp",
+        embed_link: "https://www.youtube.com/embed/rYU3a1sizNU",
+        info_intro: "This is a website for posting/reviewing campgrounds. This is the final project of a popular udemy web app development course from Colt Steel and this is my version of the project.",
+        info_insight: "This was my first CRUD web app after I got the hang of web app development. Through this project, I could understand how a real life application in designed and how different parts of the program eg front end, backend, database, 3rd party apis and middleware, cloud hosting, file upload etc. come together to form a single functional project. Through this project, I also had great insight on authentication, authorization, protecting the routes, denying invalid access and so on.",
+        info_tech_stack: "I used Express for backend, MongoDB for storing data, Tailwind for frontend, ejs for html templates, MVC architecture along with rest api design. I also used CLOUDINARY for hosting the images that are uploaded to the website."       
+    },
+    explored: {
+        project_name: "Explored",
+        youtube_link: "https://www.youtube.com/watch?v=GSj-T0uxx5A",
+        github_link: "https://github.com/antor-morsalin/explored",
+        embed_link: "https://www.youtube.com/embed/GSj-T0uxx5A",
+        info_intro: "This is a travel forum website where people post their detailes travel experience to various places. People can also interact with other people's travel log through comments, review and add other travel log to wish-list. I along with a friend developed this application for our Web Technologies course at our university",
+        info_insight: "This was my second web app project and it was really amazing to come up with and original idea and fully implement it. Although I used vanilla PHP, I could build the backend architecture of the project very fast with MVC and Restful api because previously I focused on understanding the principles and design patterns of backend engineering with Express and MongoDB rather than blindly memorizing the function names. I also developed a simple framework to help us add functionalities super fast.",
+        info_tech_stack: "I used Vanilla PHP for backend, MySql for database and Tailwind for frontend."       
     }
 };
 
