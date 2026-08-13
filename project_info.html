@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Project Info</title>
 
   <style>
@@ -39,8 +39,6 @@
       <a href="https://www.youtube.com/@antor_morsalin04" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
         <img src="./assets/icons/youtube.png" class="w-[25px]" alt="">
       </a>
-     
-
     </div>
 
     <!-- this will hold all the options -->
@@ -56,10 +54,6 @@
 
     </div>
 
-
-
-
-
     <!-- Nav design for mobile -->
     <div id="contact-container-mobile" class="flex flex-col gap-4 lg:hidden justify-center items-center w-full max-w-[140px] my-5 py-2 px-3 mx-3
     transition-all duration-500 ease-in-out hover:scale-105">
@@ -67,7 +61,6 @@
       <a href="https://www.linkedin.com/in/antormorsalin/" target="_blank" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Linkedin</a>
       <a href="https://github.com/antor-morsalin" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" target="_blank">Github</a>
       <a href="https://www.youtube.com/@antor_morsalin04" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" target="_blank">YouTube</a>
-
     </div>
 
     <!-- this will hold all the options -->
@@ -84,60 +77,91 @@
   </nav>
 
 
-
-
   <!-- main body -->
-  <main class="flex-1 max-w-[1920px] w-full px-2 md:px-8 mx-auto mt-28 mb-20">
+  <main class="flex-1 max-w-[1920px] w-full px-4 md:px-8 mx-auto mt-28 mb-16">
 
-    <h1 id="project-name" class="font-serif font-bold text-black tracking-tight text-3xl md:text-4xl pb-5">
-    </h1>
+    <!-- Header -->
+    <div class="mb-7 border-b border-black/10 pb-6">
+      <h1 id="project-name"
+        class="font-serif font-bold text-black tracking-tight text-3xl md:text-4xl lg:text-[44px] leading-tight">
+      </h1>
 
-    <a id="youtube-link" href="" target="_blank" class="group flex items-center gap-3 mb-2">
-      <p class="text-neutral-900 transition-colors duration-200
-              [background:linear-gradient(to_right,rgba(0,0,0,0.7),rgba(0,0,0,0))_left_bottom/0_1px_no-repeat]
-              group-hover:[background-size:100%_1px]">
-        Project Video on YouTube
-      </p>
-      <img src="/assets/icons/youtube.png" class="w-6 opacity-80 transition duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 filter grayscale" alt="">
-    </a>
+      <div class="mt-5 flex flex-wrap items-center gap-x-7 gap-y-3">
 
-    <a id="github-link" href="" target="_blank" class="group flex items-center gap-3 mb-5">
-      <p class="text-neutral-900 transition-colors duration-200
-              [background:linear-gradient(to_right,rgba(0,0,0,0.7),rgba(0,0,0,0))_left_bottom/0_1px_no-repeat]
-              group-hover:[background-size:100%_1px]">
-        Code on GitHub
-      </p>
-      <img src="/assets/icons/github.png" class="w-6 opacity-80 transition duration-200 group-hover:opacity-100 group-hover:translate-x-0.5 filter grayscale" alt="">
-    </a>
+        <a id="youtube-link" href="" target="_blank"
+          class="group inline-flex items-center gap-2.5 text-sm md:text-[15px] text-neutral-700 hover:text-black transition-colors duration-200">
+          <span class="relative">
+            Project Video on YouTube
+            <span class="absolute left-0 -bottom-1 h-px w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+          </span>
+          <img src="./assets/icons/youtube.png"
+            class="w-5 md:w-[22px] opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5"
+            alt="">
+        </a>
 
-    <div class="flex flex-wrap items-start gap-8">
+        <a id="github-link" href="" target="_blank"
+          class="group inline-flex items-center gap-2.5 text-sm md:text-[15px] text-neutral-700 hover:text-black transition-colors duration-200">
+          <span class="relative">
+            Code on GitHub
+            <span class="absolute left-0 -bottom-1 h-px w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+          </span>
+          <img src="./assets/icons/github.png"
+            class="w-5 md:w-[22px] opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5"
+            alt="">
+        </a>
 
-      <div class="relative rounded-2xl border border-black/10
-             bg-gradient-to-b from-white to-neutral-50
-             p-6 flex-1 min-w-[320px] sm:min-w-[446px]
-             shadow-[0_2px_0_rgba(0,0,0,0.05)]
-             transition-all duration-300 ease-out transform-gpu
-             hover:-translate-y-0.5 hover:shadow-[0_24px_80px_-24px_rgba(0,0,0,0.35)]">
-        <p id="info-intro" class="text-neutral-700 leading-8 mb-3">
-        </p>
-        <p id="info-insight" class="text-neutral-700 leading-8 mb-3">
-        </p>
-        <p id="info-tech-stack" class="text-neutral-900 leading-7 text-lg font-semibold">
-        </p>
       </div>
+    </div>
 
-      <iframe id="project-video" class="flex-1 rounded-2xl border border-black/10
-                   shadow-[0_2px_0_rgba(0,0,0,0.05)]
-                   w-[350px] sm:min-w-[446px] h-[300px] md:h-[380px]
-                   transition-all duration-300 ease-out transform-gpu
-                   hover:-translate-y-0.5 hover:shadow-[0_24px_80px_-24px_rgba(0,0,0,0.35)]" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-      </iframe>
+    <!-- Content -->
+    <div class="flex flex-col lg:flex-row items-stretch gap-6 xl:gap-8">
+
+      <!-- Information -->
+      <section
+        class="group relative flex-1 min-w-0 lg:basis-[46%] border border-black/10 bg-white px-6 py-6 md:px-7 md:py-7 overflow-hidden
+               transition-all duration-300 hover:border-black/20">
+
+        <!-- subtle decorative line -->
+        <div class="absolute left-0 top-0 h-full w-[2px] bg-black scale-y-0 origin-top transition-transform duration-500 group-hover:scale-y-100"></div>
+
+        <div class="relative">
+          <p id="info-intro"
+            class="text-neutral-700 leading-7 md:leading-8 text-[15px] md:text-base mb-5">
+          </p>
+
+          <p id="info-insight"
+            class="text-neutral-700 leading-7 md:leading-8 text-[15px] md:text-base mb-6">
+          </p>
+
+          <div class="border-t border-black/10 pt-5">
+            <p id="info-tech-stack"
+              class="text-neutral-950 leading-7 text-[15px] md:text-base font-semibold">
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video -->
+      <section
+        class="group relative flex-1 min-w-0 lg:basis-[54%] border border-black/10 bg-neutral-50 p-2 md:p-3
+               transition-all duration-300 hover:border-black/25">
+
+        <div class="relative w-full h-full min-h-[280px] md:min-h-[320px] lg:min-h-[360px] overflow-hidden bg-black">
+          <iframe id="project-video"
+            class="absolute inset-0 w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.005]"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </section>
+
     </div>
 
   </main>
-
-
-
 
 
   <script>
@@ -151,3 +175,4 @@
 
 </body>
 
+</html>
