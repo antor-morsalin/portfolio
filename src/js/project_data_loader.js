@@ -52,8 +52,17 @@ const projects_data = {
         info_intro: "This is a travel forum website where people post their detailes travel experience to various places. People can also interact with other people's travel log through comments, review and add other travel log to wish-list. I along with a friend developed this application for our Web Technologies course at our university",
         info_insight: "This was my second web app project and it was really amazing to come up with and original idea and fully implement it. Although I used vanilla PHP, I could build the backend architecture of the project very fast with MVC and Restful api because previously I focused on understanding the principles and design patterns of backend engineering with Express and MongoDB rather than blindly memorizing the function names. I also developed a simple framework to help us add functionalities super fast.",
         info_tech_stack: "I used Vanilla PHP for backend, MySql for database and Tailwind for frontend."       
+    },
+    norman_board: {
+        project_name: "Norman Board",
+        youtube_link: "https://www.youtube.com/watch?v=Ud333_WI4rI",
+        github_link: "https://github.com/antor-morsalin/Normania",
+        embed_link: "https://www.youtube.com/embed/Ud333_WI4rI",
+        info_intro: "Normania is a tangible programming system I developed as a project for my Human-Computer Interaction course. It allows children to arrange physical programming blocks on a board, which the system recognizes and converts into executable Python code. The goal is to make early programming more interactive and allow children to focus on logic and problem-solving rather than memorizing syntax.",
+        info_insight: "Normania was motivated by how I see the future of programming changing. As AI increasingly takes over much of the actual code generation, our role will shift more toward engineering the logic, designing systems, and solving problems. If the way we program is changing, I believe the way we teach programming should change as well. Instead of beginning with syntax and memorization, children should begin by learning how to think logically and construct solutions. Normania explores that idea through a tangible, child-friendly programming experience.",
+        info_tech_stack: "Normania is built primarily in Python. It uses OpenCV and ArUco markers to recognize the physical programming blocks, NumPy and Pillow for image processing, and Tkinter/CustomTkinter for the user interface. A custom parser then interprets the detected blocks and converts their logic into executable Python code."       
     }
-};
+}
 
 
 
