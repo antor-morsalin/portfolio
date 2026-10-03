@@ -61,6 +61,18 @@ const projects_data = {
         info_intro: "Normania is a tangible programming system I developed as a project for my Human-Computer Interaction course. It allows children to arrange physical programming blocks on a board, which the system recognizes and converts into executable Python code. The goal is to make early programming more interactive and allow children to focus on logic and problem-solving rather than memorizing syntax.",
         info_insight: "Normania was motivated by how I see the future of programming changing. As AI increasingly takes over much of the actual code generation, our role will shift more toward engineering the logic, designing systems, and solving problems. If the way we program is changing, I believe the way we teach programming should change as well. Instead of beginning with syntax and memorization, children should begin by learning how to think logically and construct solutions. Normania explores that idea through a tangible, child-friendly programming experience.",
         info_tech_stack: "Normania is built primarily in Python. It uses OpenCV and ArUco markers to recognize the physical programming blocks, NumPy and Pillow for image processing, and Tkinter/CustomTkinter for the user interface. A custom parser then interprets the detected blocks and converts their logic into executable Python code."       
+    },
+    ae_cnn: {
+        project_name: "Training CNN via Auto-Encoder for Classifying Satellite Images with Uncertain Distortions",
+        youtube_link: "https://www.youtube.com/watch?v=6mR0psiCToI",
+        github_link: "https://github.com/antor-morsalin/auto_encoded_cnn_satellite_img_classification",
+        embed_link: "https://www.youtube.com/embed/6mR0psiCToI",
+
+        info_intro: "In this project, I tested whether an autoencoder could make satellite image classification more resistant to distortions that the classifier had not seen during training. Using the EuroSAT dataset, I trained both the standard CNN and the autoencoder only on clean images, so the models had no exposure to the distorted test images during training. The reconstructed clean images from the autoencoder were then used to train a second CNN with the same architecture as the baseline. Finally, I introduced Gaussian blur of varying intensity only at test time to see how well each approach could handle uncertain distortion, with no leakage of distorted data into training.",
+
+        info_insight: "The difference under distortion was substantial. The standard CNN achieved 92.12% accuracy on clean images, but dropped to 61.14% after blur was introduced—a loss of 30.98 percentage points. The autoencoder-based model went from 88.69% to 80.12%, losing only 8.57 points. The same pattern appeared in F1 score: the standard CNN fell from 91.95% to 59.85%, a 32.10-point drop, whereas the autoencoder pipeline fell from 88.39% to 80.05%, a drop of only 8.34 points. On the distorted test set, the autoencoder pipeline finished 18.98 accuracy points and 20.20 F1 points ahead of the standard CNN. The standard CNN had a small advantage on clean data, but once the images were distorted, the difference in robustness was very large.",
+
+        info_tech_stack: "I used Python and PyTorch to build and train the CNN and autoencoder, Torchvision for the EuroSAT dataset and image transformations, Scikit-learn for dataset splitting and evaluation metrics, and Pandas and Matplotlib for analyzing and visualizing the results."
     }
 }
 
