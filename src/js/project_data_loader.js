@@ -73,7 +73,21 @@ const projects_data = {
         info_insight: "The difference under distortion was substantial. The standard CNN achieved 92.12% accuracy on clean images, but dropped to 61.14% after blur was introduced—a loss of 30.98 percentage points. The autoencoder-based model went from 88.69% to 80.12%, losing only 8.57 points. The same pattern appeared in F1 score: the standard CNN fell from 91.95% to 59.85%, a 32.10-point drop, whereas the autoencoder pipeline fell from 88.39% to 80.05%, a drop of only 8.34 points. On the distorted test set, the autoencoder pipeline finished 18.98 accuracy points and 20.20 F1 points ahead of the standard CNN. The standard CNN had a small advantage on clean data, but once the images were distorted, the difference in robustness was very large.",
 
         info_tech_stack: "I used Python and PyTorch to build and train the CNN and autoencoder, Torchvision for the EuroSAT dataset and image transformations, Scikit-learn for dataset splitting and evaluation metrics, and Pandas and Matplotlib for analyzing and visualizing the results."
+    },
+
+    bhv_qnt: {
+        project_name: "Behavior-Aware Quantization Sensitivity Analysis for Lightweight CNNs",
+        youtube_link: "https://youtu.be/e9yOxYCeZZY",
+        github_link: "https://github.com/antor-morsalin/QuantizationBehaviorAnalysis",
+        embed_link: "https://www.youtube.com/embed/e9yOxYCeZZY",
+
+        info_intro: "In this project, I explored how quantization affects lightweight CNNs, not only in terms of accuracy but also in how they make predictions. I fine-tuned five architectures—MobileNetV2, MobileNetV3-Small, ShuffleNetV2, SqueezeNet 1.1, and EfficientNet-B0—on the Bangladeshi Crops Disease Dataset, containing 31,053 images across 15 classes. I then applied symmetric INT8 weight-only quantization to evaluate how much accuracy the models retained after reducing weight precision. However, accuracy alone does not reveal how a model's prediction patterns change. To investigate this, I developed a behavior-aware sensitivity heuristic that combines accuracy differences with changes in row-normalized confusion matrices. I used this metric to analyze MobileNetV2's 17 inverted residual blocks individually and then performed selective quantization, progressively adding blocks from least to most sensitive.",
+
+        info_insight: "The results showed that all five architectures maintained over 95% classification accuracy after quantization, with relatively small changes from their original performance. MobileNetV2, for example, retained 96.86% accuracy compared to its original 97.13%, a drop of only 0.27 percentage points. The block-wise experiments revealed something more interesting: different blocks responded very differently to quantization, and some exhibited noticeable behavioral changes despite almost no loss in accuracy. For instance, quantizing block 4 produced no change in overall accuracy, yet its confusion-matrix difference score was 0.142. Block 1 was identified as the most sensitive, producing the largest degradation when quantized. The behavioral difference and accuracy difference showed positive correlations of 0.71 during individual block analysis and approximately 0.77 during selective quantization. These findings demonstrated that accuracy and prediction behavior are related but not interchangeable, and that examining both provides a more informative way to evaluate quantization sensitivity.",
+
+        info_tech_stack: "I used Python and PyTorch to fine-tune the CNN architectures and implement symmetric INT8 weight-only quantization. TorchVision provided the pretrained models and image transformations, while NumPy and Scikit-learn were used for numerical operations, confusion-matrix analysis, and evaluation metrics. I used Matplotlib to visualize the quantization results, compare model performance, and analyze the sensitivity of individual convolutional blocks."
     }
+
 }
 
 
