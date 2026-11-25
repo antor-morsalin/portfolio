@@ -1,36 +1,13 @@
 const contactContainer = document.getElementById('contact-container');
-const contactList = document.querySelectorAll('.contact-list');
+const contactButton = document.getElementById('contact-button');
+const contactLinks = document.getElementById('contact-links');
 
-contactContainer.addEventListener('mouseenter', ()=>{
-    contactList.forEach(item => item.classList.remove('hidden'));
-})
+function showContactLinks() {
+  contactLinks.classList.replace('hidden', 'flex');
+  contactButton.setAttribute('aria-expanded', 'true');
+}
 
-// contactContainer.addEventListener('mouseleave', ()=>{
-//     contactList.forEach(item => item.classList.add('hidden'));
-// })
-
-const contactContainerMobile = document.getElementById('contact-container-mobile');
-const contactListMobile = document.querySelectorAll('.contact-list-mobile');
-
-let contactvisible = false ;
-
-contactContainerMobile.addEventListener('click', (e)=>{
-    if(!contactvisible)
-    {
-        contactListMobile.forEach(item => item.classList.remove('hidden')); 
-    }
-    else 
-    {
-        contactListMobile.forEach(item => item.classList.add('hidden'));
-    }
-    contactvisible = !contactvisible; 
-    e.stopPropagation()
-})
-
-document.body.addEventListener('click', ()=>{
-    if(contactvisible)
-    {
-        contactListMobile.forEach(item => item.classList.add('hidden'));
-        contactvisible = !contactvisible; 
-    }
-})
+contactContainer.addEventListener('pointerenter', (event) => {
+  if (event.pointerType === 'mouse') showContactLinks();
+});
+contactButton.addEventListener('click', showContactLinks);

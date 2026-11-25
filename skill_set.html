@@ -26,61 +26,62 @@
 
   <!-- Navbar -->
 
-  <nav class="z-50 flex w-full justify-between items-start lg:justify-center lg:items-center fixed bg-white/90">
-    <!-- Contact option -->
-    <div id="contact-container" class="hidden lg:flex gap-3  justify-between items-center fixed left-6 top-6 hover:scale-105 hover:tracking-wide transition-all duration-500 ease-initial">
-      <button id="contact-button" class="text-lg active:scale-95 active:text-gray-300 transition-all duration-300" href="">Reach me</button>
-      <a href="https://www.linkedin.com/in/antormorsalin/" class="hidden text-sm  hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
-        <img src="./assets/icons/linkedin.png" class="w-[22px]" alt="">
-      </a>
-      <a href="https://github.com/antor-morsalin" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
-        <img src="./assets/icons/github.png" class="w-[25px]" alt="">
-      </a>
-      <a href="https://www.youtube.com/@antor_morsalin04" class="hidden text-sm hover:scale-115 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 contact-list" target="_blank">
-        <img src="./assets/icons/youtube.png" class="w-[25px]" alt="">
-      </a>
-      
+  <nav aria-label="Main navigation"
+    class="fixed z-50 grid w-full grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-x-1 bg-white/90 px-1.5 min-[360px]:gap-x-2 min-[360px]:px-3 sm:grid-cols-3 sm:px-6 lg:flex lg:items-center lg:justify-center lg:px-0">
 
+    <!-- Desktop navigation -->
+    <div id="contact-container"
+      class="fixed left-6 top-6 hidden items-center gap-3 transition-all duration-500 hover:scale-105 hover:tracking-wide lg:flex">
+      <button id="contact-button" type="button" aria-expanded="false" aria-controls="contact-links"
+        class="text-lg transition-all duration-300 active:scale-95">Reach me</button>
+      <div id="contact-links" class="hidden items-center gap-3">
+        <a href="https://www.linkedin.com/in/antormorsalin/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/icons/linkedin.png" class="w-[22px]" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/antor-morsalin" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/icons/github.png" class="w-[25px]" alt="GitHub">
+        </a>
+        <a href="https://www.youtube.com/@antor_morsalin04" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/icons/youtube.png" class="w-[25px]" alt="YouTube">
+        </a>
+      </div>
     </div>
 
-    <!-- this will hold all the options -->
-    <div id="menu-container" class="hidden lg:flex justify-evenly items-center w-full max-w-[140px] bg-black/90 rounded-full h-[40px] m-5 transition-all duration-500 ease-in-out overflow-hidden shadow-lg">
-
-      <!-- <a class="hidden text-white text-sm px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Home</a>
-      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Skills</a>
-      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Projects</a>
-      <a class="hidden text-white px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300 menu-items" href="">Academics</a> -->
-
-      <!-- Menu bar -->
-      <button id="menu-bar" class="text-white w-full px-3 hover:scale-105 hover:tracking-wide active:scale-95 active:text-gray-300 transition-all duration-300" href="">Menu</button>
-
+    <div id="menu-container"
+      class="m-5 hidden h-[40px] w-full max-w-[140px] items-center justify-evenly overflow-hidden rounded-full bg-black/90 shadow-lg transition-all duration-500 ease-in-out lg:flex">
+      <button id="menu-bar" type="button" aria-controls="desktop-pages" aria-expanded="false"
+        class="w-full px-3 text-white transition-all duration-300 hover:scale-105 hover:tracking-wide active:scale-95">Menu</button>
+      <div id="desktop-pages" class="hidden w-full items-center justify-evenly">
+        <a class="px-3 text-sm text-white transition-all duration-300 hover:scale-105 hover:tracking-wide" href="index.html">Home</a>
+        <a class="px-3 text-sm text-white transition-all duration-300 hover:scale-105 hover:tracking-wide" href="skill_set.html">Skills</a>
+        <a class="px-3 text-sm text-white transition-all duration-300 hover:scale-105 hover:tracking-wide" href="projects.html">Projects</a>
+        <a class="px-3 text-sm text-white transition-all duration-300 hover:scale-105 hover:tracking-wide" href="highlights.html">Highlights</a>
+      </div>
     </div>
 
+    <!-- Mobile navigation -->
+    <details name="mobile-navigation" class="my-5 justify-self-start text-center sm:w-full sm:max-w-[140px] lg:hidden">
+      <summary class="flex min-h-11 cursor-pointer list-none items-center justify-center whitespace-nowrap text-sm transition-all duration-300 hover:tracking-wide min-[360px]:text-base sm:text-lg [&::-webkit-details-marker]:hidden">Reach me</summary>
+      <div class="mt-3 flex flex-col items-center gap-4 pb-2 text-sm">
+        <a href="https://www.linkedin.com/in/antormorsalin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/antor-morsalin" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.youtube.com/@antor_morsalin04" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+    </details>
 
+    <details name="mobile-navigation"
+      class="my-5 w-full max-w-[140px] justify-self-center rounded-3xl bg-black/90 text-white shadow-md transition-all duration-300 hover:shadow-lg lg:hidden">
+      <summary class="flex min-h-11 cursor-pointer list-none items-center justify-center px-1 text-lg transition-all duration-300 hover:tracking-wide [&::-webkit-details-marker]:hidden">Menu</summary>
+      <div class="flex flex-col items-center gap-4 px-1 pb-3 pt-2 text-sm">
+        <a href="index.html">Home</a>
+        <a href="skill_set.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="highlights.html">Highlights</a>
+      </div>
+    </details>
 
-
-
-    <!-- Nav design for mobile -->
-    <div id="contact-container-mobile" class="flex flex-col gap-4 lg:hidden justify-center items-center w-full max-w-[140px] my-5 py-2 px-3 mx-3
-    transition-all duration-500 ease-in-out hover:scale-105">
-      <button id="contact-button-mobile" class="text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Reach me</button>
-      <a href="https://www.linkedin.com/in/antormorsalin/" target="_blank" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Linkedin</a>
-      <a href="https://github.com/antor-morsalin" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" target="_blank">Github</a>
-      <a href="https://www.youtube.com/@antor_morsalin04" class="hidden text-sm active:text-gray-300 contact-list-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" target="_blank">YouTube</a>
-      
-    </div>
-
-    <!-- this will hold all the options -->
-    <div id="menu-container-mobile" class="flex bg-black/90 flex-col gap-4 lg:hidden justify-evenly items-center w-full max-w-[140px] my-5 shadow-md py-2 px-3 rounded-3xl mx-8
-    transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
-      <!-- Menu bar -->
-      <button id="menu-bar-mobile" class="px-3 text-white text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider">Menu</button>
-      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="index.html">Home</a>
-      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="skill_set.html">Skills</a>
-      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="projects.html">Projects</a>
-      <a class="hidden text-white px-3 text-sm active:scale-95 active:text-gray-300 menu-items-mobile transition-all duration-300 ease-in-out hover:scale-105 hover:tracking-wider" href="academics.html">Academics</a>
-    </div>
-
+    <a href="./assets/documents/Mahmudul_Morsalin_Antor_Resume.pdf" download aria-label="Download Resume (PDF)"
+      class="my-5 flex min-h-11 items-center justify-self-end text-sm underline-offset-4 hover:underline min-[360px]:text-base sm:text-lg lg:fixed lg:right-6 lg:top-6 lg:my-0 lg:min-h-0">Resume</a>
   </nav>
 
 
@@ -107,7 +108,8 @@
 
           <div class="lg:col-span-4 lg:pb-1">
             <p class="text-base sm:text-lg leading-8 text-neutral-700">
-              My current focus is deep learning, model efficiency, and experimental research.
+              My work focuses on deep learning and AI engineering, with an emphasis on experimental
+              research into model efficiency.
               I pair a strong theoretical foundation with enough engineering experience to move
               comfortably from an idea on paper to an implementation I can test.
             </p>
@@ -167,68 +169,6 @@
       </section>
 
 
-      <!-- Foundations + Research -->
-      <section class="pb-16 sm:pb-24">
-        <div class="grid grid-cols-1 lg:grid-cols-2 border-t border-black">
-
-          <!-- Foundations -->
-          <article class="py-10 lg:pr-12 lg:border-r border-black/20">
-            <div class="flex items-center justify-between mb-8">
-              <span class="font-mono text-xs text-neutral-500">02</span>
-              <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">Foundations</span>
-            </div>
-
-            <h2 class="font-serif text-3xl sm:text-4xl tracking-tight mb-6">
-              Machine Learning & Mathematical Foundations
-            </h2>
-
-            <p class="text-neutral-700 leading-8 mb-8">
-              I care about understanding the mechanics behind learning algorithms rather than
-              treating models as black boxes. My foundation spans machine learning theory,
-              optimization, probability and statistics for ML, and the mathematical intuition
-              needed to reason about model behavior.
-            </p>
-
-            <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-sm">
-              <span class="border-t border-black/15 pt-3">Machine Learning Theory</span>
-              <span class="border-t border-black/15 pt-3">Optimization</span>
-              <span class="border-t border-black/15 pt-3">Probability & Statistics</span>
-              <span class="border-t border-black/15 pt-3">Model Evaluation</span>
-              <span class="border-t border-black/15 pt-3">scikit-learn</span>
-              <span class="border-t border-black/15 pt-3">NumPy / Pandas</span>
-            </div>
-          </article>
-
-          <!-- Research -->
-          <article class="py-10 lg:pl-12 border-t lg:border-t-0 border-black/20">
-            <div class="flex items-center justify-between mb-8">
-              <span class="font-mono text-xs text-neutral-500">03</span>
-              <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">Research</span>
-            </div>
-
-            <h2 class="font-serif text-3xl sm:text-4xl tracking-tight mb-6">
-              Reading, experimenting, understanding.
-            </h2>
-
-            <p class="text-neutral-700 leading-8 mb-8">
-              Research is one of the parts of deep learning I enjoy most. I am comfortable moving
-              through technical papers, identifying the important assumptions and design choices,
-              and building experiments around a question. I prefer controlled comparisons and
-              careful analysis over simply running a model and reporting the best result.
-            </p>
-
-            <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-sm">
-              <span class="border-t border-black/15 pt-3">Paper Reading</span>
-              <span class="border-t border-black/15 pt-3">Experiment Design</span>
-              <span class="border-t border-black/15 pt-3">Result Analysis</span>
-              <span class="border-t border-black/15 pt-3">Model Comparison</span>
-              <span class="border-t border-black/15 pt-3">Technical Writing</span>
-              <span class="border-t border-black/15 pt-3">Research Iteration</span>
-            </div>
-          </article>
-
-        </div>
-      </section>
 
 
       <!-- Engineering Foundation -->
@@ -237,7 +177,7 @@
 
           <div class="lg:col-span-4">
             <div class="flex items-center gap-3 mb-7">
-              <span class="font-mono text-xs text-neutral-500">04</span>
+              <span class="font-mono text-xs text-neutral-500">02</span>
               <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">Engineering foundation</span>
             </div>
 
@@ -291,13 +231,51 @@
       </section>
 
 
+      <!-- English proficiency -->
+      <section class="py-14 sm:py-20 border-b border-black" aria-labelledby="ielts-heading">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3 mb-7">
+              <span class="font-mono text-xs text-neutral-500">03</span>
+              <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">English proficiency</span>
+            </div>
+            <h2 id="ielts-heading" class="font-serif text-4xl sm:text-5xl tracking-tight">IELTS Academic</h2>
+            <p class="mt-4 text-base leading-7 text-neutral-700">
+              Overall band <strong class="ml-1 font-serif text-3xl font-normal text-black">8.0</strong>
+            </p>
+          </div>
+
+          <dl class="lg:col-span-8 lg:self-center grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5">
+            <div class="border-t border-black/15 pt-3">
+              <dt class="text-sm text-neutral-600">Listening</dt>
+              <dd class="mt-2 font-serif text-2xl text-black">9.0</dd>
+            </div>
+            <div class="border-t border-black/15 pt-3">
+              <dt class="text-sm text-neutral-600">Reading</dt>
+              <dd class="mt-2 font-serif text-2xl text-black">8.0</dd>
+            </div>
+            <div class="border-t border-black/15 pt-3">
+              <dt class="text-sm text-neutral-600">Writing</dt>
+              <dd class="mt-2 font-serif text-2xl text-black">7.0</dd>
+            </div>
+            <div class="border-t border-black/15 pt-3">
+              <dt class="text-sm text-neutral-600">Speaking</dt>
+              <dd class="mt-2 font-serif text-2xl text-black">8.5</dd>
+            </div>
+          </dl>
+
+        </div>
+      </section>
+
+
       <!-- Collaboration -->
       <section class="py-16 sm:py-24">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
           <div class="lg:col-span-4">
             <div class="flex items-center gap-3 mb-7">
-              <span class="font-mono text-xs text-neutral-500">05</span>
+              <span class="font-mono text-xs text-neutral-500">04</span>
               <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">How I work</span>
             </div>
             <h2 class="font-serif text-4xl sm:text-5xl tracking-tight">
