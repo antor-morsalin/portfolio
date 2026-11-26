@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -18,6 +18,85 @@
     body.loaded {
       opacity: 1;
     }
+  
+    /* Skills page: shared editorial language with the homepage; navbar is unaffected. */
+    .skills-page {
+      --ink: #171717;
+      --muted: #525252;
+      --line: #deddd9;
+      --serif: Georgia, 'Times New Roman', serif;
+      width: 100%;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .skills-page *, .skills-page *::before, .skills-page *::after { box-sizing: border-box; }
+    .skills-page h1, .skills-page h2, .skills-page h3, .skills-page p, .skills-page dl, .skills-page dd { margin: 0; }
+    .skills-page a { color: inherit; }
+    .skills-page .shell { width: min(100%, 1152px); margin-inline: auto; padding-inline: clamp(24px, 4vw, 40px); }
+    .skills-page .eyebrow { font-size: 11px; font-weight: 550; letter-spacing: .19em; text-transform: uppercase; color: #656565; line-height: 1.6; }
+    .skills-page .hero { padding-top: clamp(136px, 13vw, 190px); padding-bottom: clamp(48px, 6.2vw, 88px); }
+    .skills-page .hero-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+    .skills-page .hero-note { letter-spacing: .07em; }
+    .skills-page .hero-grid { display: grid; grid-template-columns: minmax(0, 1.95fr) minmax(0, 1fr); align-items: end; gap: clamp(24px, 4vw, 56px); }
+    .skills-page .hero-title { font-family: var(--serif); font-size: clamp(48px, 7vw, 98px); font-weight: 400; letter-spacing: -.06em; line-height: .98; }
+    .skills-page em { font-weight: 400; }
+    .skills-page .intro { padding-bottom: 3px; }
+    .skills-page .intro p { font-size: clamp(16px, 1.55vw, 19px); line-height: 1.65; color: var(--muted); }
+    .skills-page .text-link { display: inline-flex; gap: 12px; align-items: center; width: fit-content; font-size: 14px; font-weight: 600; text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid currentColor; }
+    .skills-page .text-link span { transition: transform .2s ease; }
+    .skills-page .text-link:hover span { transform: translateX(4px); }
+    .skills-page .intro .text-link { margin-top: 23px; }
+    .skills-page .section { padding-block: clamp(46px, 6.4vw, 82px); }
+    .skills-page .research { background: #f8f8f6; border-block: 1px solid var(--line); }
+    .skills-page .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(30px, 7vw, 90px); align-items: start; }
+    .skills-page .section-heading h2 { margin-top: 17px; font-family: var(--serif); font-size: clamp(36px, 4.25vw, 59px); font-weight: 400; line-height: 1.06; letter-spacing: -.045em; }
+    .skills-page .copy .lead { font-size: clamp(19px, 2vw, 24px); font-weight: 450; line-height: 1.5; letter-spacing: -.025em; color: var(--ink); }
+    .skills-page .copy p + p { margin-top: 15px; }
+    .skills-page .copy p:not(.lead), .skills-page .description { color: var(--muted); font-size: 16px; line-height: 1.75; }
+    .skills-page .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: clamp(32px, 4.4vw, 52px); padding-top: 24px; border-top: 1px solid var(--line); }
+    .skills-page .research-grid article + article { border-left: 1px solid var(--line); padding-left: 26px; }
+    .skills-page .skill-title { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.2vw, 30px); letter-spacing: -.025em; line-height: 1.15; }
+    .skills-page .research-grid p { font-size: 14px; line-height: 1.65; color: var(--muted); margin-top: 9px; }
+    .skills-page .terms { display: flex; flex-wrap: wrap; gap: 7px 6px; padding: 0; margin: 18px 0 0; list-style: none; }
+    .skills-page .terms li { font-size: 12px; font-weight: 500; line-height: 1.4; padding: 5px 9px; border: 1px solid var(--line); border-radius: 3px; color: #404040; }
+    .skills-page .engineering .description { margin-top: 12px; }
+    .skills-page .engineering-list article + article { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 28px; }
+    .skills-page .language { border-block: 1px solid var(--line); background: #f8f8f6; padding-block: clamp(30px, 4.4vw, 56px); }
+    .skills-page .language-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); align-items: center; gap: clamp(30px, 7vw, 90px); }
+    .skills-page .language-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .skills-page .language h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(25px, 2.5vw, 34px); line-height: 1.12; letter-spacing: -.035em; margin-top: 8px; }
+    .skills-page .overall { text-align: right; flex: none; }
+    .skills-page .overall dd { font-family: var(--serif); font-size: 54px; line-height: 1; letter-spacing: -.055em; }
+    .skills-page .overall > div { display: flex; flex-direction: column; }
+    .skills-page .overall dt { order: 1; font-size: 11px; color: #656565; margin-top: 5px; }
+    .skills-page .scores { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .skills-page .scores > div { border-left: 1px solid var(--line); padding-left: 15px; }
+    .skills-page .scores dt { font-size: 12px; color: var(--muted); }
+    .skills-page .scores dd { font-family: var(--serif); font-size: 32px; line-height: 1.1; margin-top: 7px; letter-spacing: -.04em; font-variant-numeric: lining-nums tabular-nums; }
+    .skills-page .closing { padding-block: clamp(40px, 5.8vw, 76px); }
+    .skills-page .closing-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(24px, 5vw, 60px); align-items: start; padding: clamp(28px, 4.5vw, 56px); background: #181818; color: #fff; }
+    .skills-page .closing-panel .eyebrow { color: #bdbdbd; }
+    .skills-page .closing-panel h2 { margin-top: 10px; font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4vw, 55px); line-height: 1.08; letter-spacing: -.04em; }
+    .skills-page .closing-copy p { color: #d1d1d1; font-size: 16px; line-height: 1.75; }
+    .skills-page .closing-copy .terms { margin-top: 20px; }
+    .skills-page .closing-copy .terms li { color: #e2e2e2; border-color: #515151; }
+    .skills-page a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+    @media (max-width: 900px) {
+      .skills-page .hero-grid, .skills-page .split, .skills-page .language-grid { grid-template-columns: 1fr; gap: 24px; }
+      .skills-page .hero-title { font-size: clamp(46px, 10.4vw, 92px); }
+      .skills-page .intro { max-width: 580px; }
+      .skills-page .language-heading { justify-content: flex-start; gap: 32px; }
+      .skills-page .overall { text-align: left; }
+    }
+    @media (max-width: 600px) {
+      .skills-page .hero { padding-top: 124px; }
+      .skills-page .hero-top { gap: 8px; margin-bottom: 22px; }
+      .skills-page .hero-title { font-size: clamp(40px, 10.7vw, 64px); }
+      .skills-page .research-grid, .skills-page .closing-panel { grid-template-columns: 1fr; gap: 20px; }
+      .skills-page .research-grid article + article { border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
+      .skills-page .scores { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { body, .skills-page .text-link span { transition: none; } }
   </style>
 
 </head>
@@ -89,221 +168,126 @@
 
   <!-- main body -->
 
-  <main class="flex-1 w-full mt-28 mb-24 px-5 sm:px-8">
-    <div class="max-w-6xl mx-auto">
+  <main class="skills-page">
 
-      <!-- Intro -->
-      <section class="pt-10 sm:pt-16 pb-16 sm:pb-24 border-b border-black">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-          <div class="lg:col-span-8">
-            <p class="text-xs sm:text-sm uppercase tracking-[0.28em] text-neutral-500 mb-5">
-              Skills & Practice
-            </p>
+    <!-- Introduction -->
+    <section class="hero shell" aria-labelledby="skills-title">
+      <div class="hero-top">
+        <p class="eyebrow">Skills &amp; practice</p>
+        <p class="eyebrow hero-note">Research &nbsp;/&nbsp; Development</p>
+      </div>
+      <div class="hero-grid">
+        <h1 id="skills-title" class="hero-title">Research &amp;<br><em>engineering.</em></h1>
+        <div class="intro">
+          <p>I work on deep learning and AI engineering, drawing on a foundation in software development to turn research ideas into working implementations.</p>
+          <a class="text-link" href="projects.html">See my projects <span aria-hidden="true">&#8599;</span></a>
+        </div>
+      </div>
+    </section>
 
-            <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl leading-[0.95] tracking-tight text-black">
-              Research first.<br>
-              <span class="italic font-normal">Engineering underneath.</span>
-            </h1>
+    <!-- Primary focus -->
+    <section class="section research" aria-labelledby="research-title">
+      <div class="shell">
+        <div class="split">
+          <div class="section-heading">
+            <p class="eyebrow">Primary focus</p>
+            <h2 id="research-title">Deep learning &amp; <em>model efficiency.</em></h2>
           </div>
-
-          <div class="lg:col-span-4 lg:pb-1">
-            <p class="text-base sm:text-lg leading-8 text-neutral-700">
-              My work focuses on deep learning and AI engineering, with an emphasis on experimental
-              research into model efficiency.
-              I pair a strong theoretical foundation with enough engineering experience to move
-              comfortably from an idea on paper to an implementation I can test.
-            </p>
+          <div class="copy">
+            <p class="lead">I am particularly interested in making neural networks more efficient without compromising their performance.</p>
+            <p>Much of my work involves reading research papers, examining the ideas behind a method, and designing experiments to test them. I work with PyTorch and have explored neural network architectures, transfer learning, quantization and knowledge distillation.</p>
           </div>
         </div>
-      </section>
-
-
-      <!-- Primary Focus -->
-      <section class="py-16 sm:py-24">
-        <div class="flex items-center gap-4 mb-8">
-          <span class="font-mono text-xs text-neutral-500">01</span>
-          <div class="h-px flex-1 bg-black/20"></div>
-          <span class="text-xs uppercase tracking-[0.24em] text-neutral-500">Primary focus</span>
+        <div class="research-grid" aria-label="Areas of deep learning practice">
+          <article>
+            <h3 class="skill-title">Models &amp; theory</h3>
+            <p>A theoretical foundation in machine learning and deep learning, with hands-on experience in neural networks and vision models.</p>
+            <ul class="terms" aria-label="Model techniques">
+              <li>Neural Networks</li><li>CNNs</li><li>Transfer Learning</li>
+            </ul>
+          </article>
+          <article>
+            <h3 class="skill-title">Model optimization</h3>
+            <p>Exploring ways to reduce model complexity and understand how optimization affects network behavior and performance.</p>
+            <ul class="terms" aria-label="Optimization techniques">
+              <li>Quantization</li><li>Knowledge Distillation</li><li>Model Optimization</li>
+            </ul>
+          </article>
+          <article>
+            <h3 class="skill-title">Research in practice</h3>
+            <p>Translating methods from research papers into implementations, designing experiments and analyzing the results.</p>
+            <ul class="terms" aria-label="Research tools and methods">
+              <li>PyTorch</li><li>Experimental Design</li><li>Research Methodology</li>
+            </ul>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="bg-black text-white px-6 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-
-            <div class="lg:col-span-5">
-              <p class="text-xs uppercase tracking-[0.28em] text-white/50 mb-4">
-                Deep Learning
-              </p>
-              <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
-                Theory, models,<br>and efficient learning.
-              </h2>
-            </div>
-
-            <div class="lg:col-span-7">
-              <p class="text-base sm:text-lg leading-8 text-white/80 mb-8">
-                Deep learning is where most of my attention goes now. I have a strong foundation
-                in machine learning and deep learning theory, and I am comfortable reading research
-                papers, following their methodology, and translating the underlying ideas into
-                experiments and implementations.
-              </p>
-
-              <p class="text-base sm:text-lg leading-8 text-white/80 mb-10">
-                I have worked with artificial neural networks, CNNs, and transfer learning, and I
-                have explored model optimization through quantization and knowledge distillation.
-                I enjoy understanding why a model behaves the way it does just as much as improving
-                the final metric.
-              </p>
-
-              <div class="flex flex-wrap gap-x-3 gap-y-3">
-                <span class="border border-white/30 px-3 py-1.5 text-xs">PyTorch</span>
-                <span class="border border-white/30 px-3 py-1.5 text-xs">Neural Networks</span>
-                <span class="border border-white/30 px-3 py-1.5 text-xs">CNNs</span>
-                <span class="border border-white/30 px-3 py-1.5 text-xs">Transfer Learning</span>
-                <span class="border border-white/30 px-3 py-1.5 text-xs">Quantization</span>
-                <span class="border border-white/30 px-3 py-1.5 text-xs">Knowledge Distillation</span>
-                <span class="border border-white/30 px-3 py-1.5 text-xs">Model Optimization</span>
-              </div>
-            </div>
-
-          </div>
+    <!-- Engineering foundation -->
+    <section class="section engineering shell" aria-labelledby="engineering-title">
+      <div class="split">
+        <div class="section-heading">
+          <p class="eyebrow">Engineering foundation</p>
+          <h2 id="engineering-title">Beyond the <em>model.</em></h2>
+          <p class="description">My earlier work in software engineering continues to shape how I approach research and build systems.</p>
         </div>
-      </section>
-
-
-
-
-      <!-- Engineering Foundation -->
-      <section class="py-14 sm:py-20 border-y border-black">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-
-          <div class="lg:col-span-4">
-            <div class="flex items-center gap-3 mb-7">
-              <span class="font-mono text-xs text-neutral-500">02</span>
-              <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">Engineering foundation</span>
-            </div>
-
-            <h2 class="font-serif text-4xl sm:text-5xl tracking-tight">
-              Still an engineer.
-            </h2>
-          </div>
-
-          <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-
-            <div>
-              <h3 class="text-lg font-medium mb-4">Backend & Databases</h3>
-              <p class="text-sm leading-7 text-neutral-600 mb-6">
-                Before shifting my focus toward deep learning, I spent significant time on backend
-                development. I remain comfortable with server-side application structure, APIs,
-                and database-backed systems, with a particular interest in database design and
-                engineering.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="border border-black/20 px-2.5 py-1 text-xs">JavaScript</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">Express.js</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">SQL</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">MongoDB</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">REST APIs</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">MVC</span>
-              </div>
-            </div>
-
-            <div>
-              <h3 class="text-lg font-medium mb-4">Programming & Problem Solving</h3>
-              <p class="text-sm leading-7 text-neutral-600 mb-6">
-                Competitive programming gave me a strong problem-solving habit and made me
-                comfortable reasoning through unfamiliar problems. I primarily used C++ on
-                Codeforces and LeetCode, while Python is now my main language for machine learning
-                and research work.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="border border-black/20 px-2.5 py-1 text-xs">Python</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">C++</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">Git</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">GitHub</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">Codeforces</span>
-                <span class="border border-black/20 px-2.5 py-1 text-xs">LeetCode</span>
-              </div>
-            </div>
-
-          </div>
+        <div class="engineering-list">
+          <article>
+            <h3 class="skill-title">Programming &amp; problem solving</h3>
+            <p class="description">Competitive programming taught me to break down unfamiliar problems and reason about solutions. I practiced with C++ on Codeforces and LeetCode, and now primarily use Python for machine learning and research.</p>
+            <ul class="terms" aria-label="Programming skills">
+              <li>Python</li><li>C++</li><li>Git</li><li>GitHub</li><li>Codeforces</li><li>LeetCode</li>
+            </ul>
+          </article>
+          <article>
+            <h3 class="skill-title">Backend &amp; databases</h3>
+            <p class="description">Before moving toward deep learning, I spent significant time building backend applications. I am comfortable with server-side architecture, API development and database-backed systems, with a particular interest in database design.</p>
+            <ul class="terms" aria-label="Backend skills">
+              <li>JavaScript</li><li>Express.js</li><li>SQL</li><li>MongoDB</li><li>REST APIs</li><li>MVC</li>
+            </ul>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-
-      <!-- English proficiency -->
-      <section class="py-14 sm:py-20 border-b border-black" aria-labelledby="ielts-heading">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-
-          <div class="lg:col-span-4">
-            <div class="flex items-center gap-3 mb-7">
-              <span class="font-mono text-xs text-neutral-500">03</span>
-              <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">English proficiency</span>
-            </div>
-            <h2 id="ielts-heading" class="font-serif text-4xl sm:text-5xl tracking-tight">IELTS Academic</h2>
-            <p class="mt-4 text-base leading-7 text-neutral-700">
-              Overall band <strong class="ml-1 font-serif text-3xl font-normal text-black">8.0</strong>
-            </p>
+    <!-- English proficiency -->
+    <section class="language" aria-labelledby="ielts-heading">
+      <div class="shell language-grid">
+        <div class="language-heading">
+          <div>
+            <p class="eyebrow">English proficiency</p>
+            <h2 id="ielts-heading">IELTS Academic</h2>
           </div>
-
-          <dl class="lg:col-span-8 lg:self-center grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5">
-            <div class="border-t border-black/15 pt-3">
-              <dt class="text-sm text-neutral-600">Listening</dt>
-              <dd class="mt-2 font-serif text-2xl text-black">9.0</dd>
-            </div>
-            <div class="border-t border-black/15 pt-3">
-              <dt class="text-sm text-neutral-600">Reading</dt>
-              <dd class="mt-2 font-serif text-2xl text-black">8.0</dd>
-            </div>
-            <div class="border-t border-black/15 pt-3">
-              <dt class="text-sm text-neutral-600">Writing</dt>
-              <dd class="mt-2 font-serif text-2xl text-black">7.0</dd>
-            </div>
-            <div class="border-t border-black/15 pt-3">
-              <dt class="text-sm text-neutral-600">Speaking</dt>
-              <dd class="mt-2 font-serif text-2xl text-black">8.5</dd>
-            </div>
+          <dl class="overall">
+            <div><dt>Overall band</dt><dd>8.0</dd></div>
           </dl>
-
         </div>
-      </section>
+        <dl class="scores" aria-label="IELTS individual band scores">
+          <div><dt>Listening</dt><dd>9.0</dd></div>
+          <div><dt>Reading</dt><dd>8.0</dd></div>
+          <div><dt>Writing</dt><dd>7.0</dd></div>
+          <div><dt>Speaking</dt><dd>8.5</dd></div>
+        </dl>
+      </div>
+    </section>
 
-
-      <!-- Collaboration -->
-      <section class="py-16 sm:py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-
-          <div class="lg:col-span-4">
-            <div class="flex items-center gap-3 mb-7">
-              <span class="font-mono text-xs text-neutral-500">04</span>
-              <span class="text-xs uppercase tracking-[0.22em] text-neutral-500">How I work</span>
-            </div>
-            <h2 class="font-serif text-4xl sm:text-5xl tracking-tight">
-              Calm in a team.<br>
-              Reliable in execution.
-            </h2>
-          </div>
-
-          <div class="lg:col-span-8 lg:pt-10">
-            <p class="text-lg sm:text-xl leading-9 text-neutral-700 max-w-3xl">
-              I communicate clearly, take ownership, and tend to become the person people rely on
-              when a project needs structure or momentum. I enjoy making collaborators feel
-              comfortable asking questions, keeping everyone aligned, and reducing the uncertainty
-              around getting things done.
-            </p>
-
-            <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm uppercase tracking-[0.16em]">
-              <span>Communication</span>
-              <span>Leadership</span>
-              <span>Team Coordination</span>
-              <span>Ownership</span>
-            </div>
-          </div>
-
+    <!-- Collaboration -->
+    <section class="closing shell" aria-labelledby="collaboration-title">
+      <div class="closing-panel">
+        <div>
+          <p class="eyebrow">How I work</p>
+          <h2 id="collaboration-title">Working well, <em>together.</em></h2>
         </div>
-      </section>
+        <div class="closing-copy">
+          <p>I like bringing structure to a project, taking responsibility for my part and keeping everyone on the same page. Whether I am leading a team or working alongside one, I value clear communication and an environment where people feel comfortable asking questions.</p>
+          <ul class="terms" aria-label="Collaboration skills">
+            <li>Communication</li><li>Leadership</li><li>Team Coordination</li><li>Ownership</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    </div>
   </main>
 
 

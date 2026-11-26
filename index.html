@@ -18,6 +18,77 @@
     body.loaded {
       opacity: 1;
     }
+
+    /* Homepage styles are scoped so the shared navbar remains untouched. */
+    .home-page {
+      --ink: #171717;
+      --muted: #525252;
+      --line: #deddd9;
+      --serif: Georgia, 'Times New Roman', serif;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      width: 100%;
+    }
+    .home-page *, .home-page *::before, .home-page *::after { box-sizing: border-box; }
+    .home-page h1, .home-page h2, .home-page h3, .home-page p { margin: 0; }
+    .home-page a { color: inherit; }
+    .home-page .shell { width: min(100%, 1152px); margin-inline: auto; padding-inline: clamp(24px, 4vw, 40px); }
+    .home-page .eyebrow { font-size: 11px; font-weight: 550; letter-spacing: .19em; text-transform: uppercase; color: #656565; line-height: 1.6; }
+    .home-page .hero { padding-top: clamp(136px, 13vw, 190px); padding-bottom: clamp(48px, 6.2vw, 88px); }
+    .home-page .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 30px; }
+    .home-page .location { display: inline-flex; align-items: center; gap: 8px; letter-spacing: .07em; white-space: nowrap; }
+    .home-page .location::before { content: ''; width: 6px; height: 6px; background: #7c7c76; border-radius: 50%; }
+    .home-page .hero-grid { display: grid; grid-template-columns: minmax(0, 1.95fr) minmax(0, 1fr); align-items: end; gap: clamp(24px, 4vw, 56px); }
+    .home-page .hero-name { font-family: var(--serif); font-size: clamp(48px, 7.4vw, 108px); font-weight: 400; letter-spacing: -.065em; line-height: .96; }
+    .home-page .hero-name em { font-weight: 400; }
+    .home-page .intro { padding-bottom: 3px; }
+    .home-page .intro p { font-size: clamp(16px, 1.55vw, 19px); line-height: 1.65; color: var(--muted); }
+    .home-page .text-link { display: inline-flex; gap: 12px; align-items: center; width: fit-content; font-size: 14px; font-weight: 600; text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid currentColor; }
+    .home-page .text-link span { transition: transform .2s ease; }
+    .home-page .text-link:hover span { transform: translateX(4px); }
+    .home-page .intro .text-link { margin-top: 23px; }
+    .home-page .about { background: #f8f8f6; border-block: 1px solid var(--line); padding-block: clamp(46px, 6.4vw, 82px); }
+    .home-page .about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(30px, 7vw, 90px); align-items: start; }
+    .home-page .about-heading h2 { margin-top: 17px; font-family: var(--serif); font-size: clamp(36px, 4.25vw, 59px); font-weight: 400; line-height: 1.06; letter-spacing: -.045em; max-width: 10em; }
+    .home-page .about-heading h2 em { font-weight: 400; }
+    .home-page .bio { max-width: 650px; }
+    .home-page .bio .lead { font-size: clamp(19px, 2vw, 24px); font-weight: 450; line-height: 1.5; letter-spacing: -.025em; color: var(--ink); }
+    .home-page .bio p + p { margin-top: 17px; }
+    .home-page .bio p:not(.lead) { color: var(--muted); font-size: 16px; line-height: 1.8; }
+    .home-page .focus { margin-top: clamp(32px, 4.4vw, 52px); padding-top: 22px; border-top: 1px solid var(--line); }
+    .home-page .focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 18px; }
+    .home-page .focus-item { min-width: 0; }
+    .home-page .focus-item + .focus-item { border-left: 1px solid var(--line); padding-left: 26px; }
+    .home-page .focus-item h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.2vw, 29px); letter-spacing: -.025em; line-height: 1.2; }
+    .home-page .focus-item p { font-size: 14px; line-height: 1.6; color: var(--muted); margin-top: 7px; }
+    .home-page .education { margin-top: 24px; font-size: 12px; line-height: 1.65; color: #666; }
+    .home-page .education strong { color: #343434; font-weight: 600; }
+    .home-page .contact { padding-block: clamp(40px, 5.8vw, 76px); }
+    .home-page .contact-panel { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; gap: 30px; padding: clamp(28px, 4.5vw, 56px); background: #181818; color: white; }
+    .home-page .contact-panel .eyebrow { color: #bdbdbd; }
+    .home-page .contact-panel h2 { margin-top: 10px; font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4vw, 55px); line-height: 1.08; letter-spacing: -.04em; }
+    .home-page .contact-panel h2 em { font-weight: 400; white-space: nowrap; }
+    .home-page .contact-copy p { color: #d1d1d1; font-size: 16px; line-height: 1.65; }
+    .home-page .contact-copy .text-link { margin-top: 18px; overflow-wrap: anywhere; }
+    .home-page a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+    @media (max-width: 900px) {
+      .home-page .hero-grid { grid-template-columns: 1fr; gap: 25px; }
+      .home-page .hero-name { font-size: clamp(46px, 10.4vw, 92px); }
+      .home-page .intro { max-width: 580px; }
+      .home-page .about-grid { grid-template-columns: 1fr; gap: 22px; }
+      .home-page .about-heading h2 { max-width: none; }
+    }
+    @media (max-width: 600px) {
+      .home-page .hero-top { flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+      .home-page .hero-name { font-size: clamp(40px, 10.7vw, 64px); }
+      .home-page .hero { padding-top: 124px; }
+      .home-page .focus-grid, .home-page .contact-panel { grid-template-columns: 1fr; gap: 18px; }
+      .home-page .focus-item + .focus-item { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+      .home-page .contact-copy .text-link { font-size: 13px; gap: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body, .home-page .text-link span { transition: none; }
+    }
   </style>
 
 </head>
@@ -87,116 +158,72 @@
 
 
   <!-- Main Body -->
-  <main class="w-full">
+  <main class="home-page">
 
     <!-- Hero / Introduction -->
-    <section class="w-full max-w-6xl mx-auto px-6 sm:px-8 pt-40 sm:pt-44 lg:pt-48 pb-24 lg:pb-32">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-end">
-
-        <div class="lg:col-span-8">
-          <p class="mb-6 text-xs sm:text-sm uppercase tracking-[0.28em] text-neutral-500">
-            Computer Science · AI Engineering · Deep Learning Optimization
-          </p>
-
-          <h1 class="font-serif text-[clamp(3rem,8vw,7.5rem)] leading-[0.88] tracking-[-0.045em] text-black">
-            Mahmudul<br>
-            Morsalin <span class="italic font-normal">Antor</span>
-          </h1>
+    <section class="hero shell" aria-labelledby="home-title">
+      <div class="hero-top">
+        <p class="eyebrow">Computer Science &nbsp;/&nbsp; AI Engineering</p>
+        <p class="eyebrow location">Dhaka, Bangladesh</p>
+      </div>
+      <div class="hero-grid">
+        <h1 id="home-title" class="hero-name">
+          Mahmudul<br>
+          Morsalin <em>Antor</em>
+        </h1>
+        <div class="intro">
+          <p>Final-year Computer Science and Engineering student at American International University-Bangladesh, working on deep learning optimization and AI engineering.</p>
+          <a class="text-link" href="projects.html">Explore my work <span aria-hidden="true">&#8599;</span></a>
         </div>
-
-        <div class="lg:col-span-4 lg:border-l lg:border-black/20 lg:pl-8 pb-1">
-          <p class="text-lg sm:text-xl leading-8 text-neutral-700 max-w-md">
-            Final-year Computer Science and Engineering student at American International University-Bangladesh,
-            researching efficient vision models and exploring AI engineering.
-          </p>
-
-          <div class="mt-8 flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-neutral-500">
-            <span class="h-px w-10 bg-black"></span>
-            Dhaka, Bangladesh
-          </div>
-        </div>
-
       </div>
     </section>
 
     <!-- About -->
-    <section class="border-y border-black/15">
-      <div class="w-full max-w-6xl mx-auto px-6 sm:px-8 py-20 lg:py-28">
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 mb-16 lg:mb-20">
-          <div class="lg:col-span-4">
-            <p class="text-xs uppercase tracking-[0.28em] text-neutral-500">About</p>
+    <section class="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="about-grid">
+          <div class="about-heading">
+            <p class="eyebrow">About me</p>
+            <h2 id="about-title">From building systems to <em>optimizing models.</em></h2>
           </div>
-
-          <div class="lg:col-span-8">
-            <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight text-black max-w-3xl">
-              AI engineering and<br>
-              <span class="italic font-normal">deep learning optimization research.</span>
-            </h2>
+          <div class="bio">
+            <p class="lead">I enjoy working on problems that bring theory and engineering together.</p>
+            <p>I started university with a focus on competitive programming on Codeforces and software development. Over time, I began exploring problems beyond software alone, building a wireless robotic arm controlled by hand movements and a physical logic board that translates an arrangement of blocks into executable code.</p>
+            <p>My work now centers on deep learning, particularly how we can make neural networks more efficient without sacrificing their performance. I am interested in both the research behind these methods and their application in real-world AI systems.</p>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 border-t border-black/15">
-
-          <!-- Background -->
-          <article class="py-10 lg:py-14 lg:pr-12 border-b lg:border-b-0 lg:border-r border-black/15">
-            <div class="flex items-baseline justify-between gap-6 mb-8">
-              <h3 class="font-serif text-2xl sm:text-3xl text-black">Background</h3>
-              <span class="font-serif text-5xl text-black/10 select-none">01</span>
+        <div class="focus" aria-labelledby="focus-title">
+          <p id="focus-title" class="eyebrow">What I work on</p>
+          <div class="focus-grid">
+            <div class="focus-item">
+              <h3>Deep learning</h3>
+              <p>Model optimization, compression and efficient computer vision.</p>
             </div>
-
-            <p class="text-base sm:text-lg leading-8 text-neutral-700 max-w-xl">
-              I was born and raised in Dhaka. I completed my SSC at Monipur High School and College and
-              my HSC at Birsreshtha Noor Mohammad Public College. Early in my undergraduate studies, I
-              focused on problem solving and software engineering. I solved problems regularly on
-              Codeforces and built applications to try out the concepts I was learning.
-            </p>
-          </article>
-
-          <!-- Currently -->
-          <article class="py-10 lg:py-14 lg:pl-12">
-            <div class="flex items-baseline justify-between gap-6 mb-8">
-              <h3 class="font-serif text-2xl sm:text-3xl text-black">Currently</h3>
-              <span class="font-serif text-5xl text-black/10 select-none">02</span>
+            <div class="focus-item">
+              <h3>AI engineering</h3>
+              <p>Building AI-powered applications and exploring practical uses of machine learning.</p>
             </div>
-
-            <p class="text-base sm:text-lg leading-8 text-neutral-700 max-w-xl">
-              For the past two years, I’ve studied deep learning theory while working across electronics,
-              human–computer interaction, and software engineering. My projects include a wireless robotic
-              arm that follows hand movements and a physical logic board that turns an arrangement of blocks
-              into executable code. My current focus is deep learning optimization research and AI engineering.
-            </p>
-          </article>
-
+            <div class="focus-item">
+              <h3>Beyond AI</h3>
+              <p>Software engineering, electronics and human–computer interaction.</p>
+            </div>
+          </div>
         </div>
+        <p class="education"><strong>Earlier education:</strong> Monipur High School and College (SSC) &middot; Birsreshtha Noor Mohammad Public College (HSC).</p>
       </div>
     </section>
 
     <!-- Direction / CTA -->
-    <section class="w-full max-w-6xl mx-auto px-6 sm:px-8 py-20 lg:py-28">
-      <div class="bg-black text-white px-7 sm:px-10 lg:px-14 py-12 sm:py-14 lg:py-16">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-
-          <div class="lg:col-span-8">
-            <p class="text-xs uppercase tracking-[0.28em] text-white/50 mb-5">Contact</p>
-            <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
-              Have something<br>
-              <span class="italic font-normal">in mind?</span>
-            </h2>
-          </div>
-
-          <div class="lg:col-span-4 lg:pl-6">
-            <p class="text-base sm:text-lg leading-8 text-white/70">
-              I welcome conversations about deep learning, AI engineering, and collaborative projects.
-              You can reach me at <a href="mailto:antor.morsalin68@gmail.com" class="font-semibold text-white underline-offset-4 hover:underline">antor.morsalin68@gmail.com</a>. 
-            </p>
-
-            <div class="mt-8 flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-white/60">
-              <span class="h-px w-10 bg-white"></span>
-              Let’s connect
-            </div>
-          </div>
-
+    <section class="contact shell" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Have something <em>in mind?</em></h2>
+        </div>
+        <div class="contact-copy">
+          <p>I'm open to conversations about research, engineering and collaborative projects.</p>
+          <a class="text-link" href="mailto:antor.morsalin68@gmail.com">antor.morsalin68@gmail.com <span aria-hidden="true">&#8599;</span></a>
         </div>
       </div>
     </section>

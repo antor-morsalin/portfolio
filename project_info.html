@@ -18,6 +18,67 @@
     body.loaded {
       opacity: 1;
     }
+
+    /* Project details — shared editorial design language. */
+    .detail-page {
+      --ink: #171717; --muted: #525252; --line: #deddd9; --paper: #f8f8f6;
+      --serif: Georgia, 'Times New Roman', serif;
+      width: 100%; flex: 1; color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .detail-page *, .detail-page *::before, .detail-page *::after { box-sizing: border-box; }
+    .detail-page h1, .detail-page h2, .detail-page p { margin: 0; }
+    .detail-page a { color: inherit; text-decoration: none; }
+    .detail-page .shell { width: min(100%, 1152px); margin-inline: auto; padding-inline: clamp(24px, 4vw, 40px); }
+    .detail-page .hero { padding-top: clamp(136px, 13vw, 190px); padding-bottom: clamp(34px, 5vw, 62px); }
+    .detail-page .eyebrow { font-size: 11px; font-weight: 550; letter-spacing: .19em; text-transform: uppercase; color: #656565; line-height: 1.6; }
+    .detail-page .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
+    .detail-page .back { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 550; color: var(--muted); }
+    .detail-page .back span { transition: transform .2s ease; }
+    .detail-page .back:hover span { transform: translateX(-4px); }
+    .detail-page #project-name { font: 400 clamp(38px, 5.4vw, 76px)/1.06 var(--serif); letter-spacing: -.045em; overflow-wrap: anywhere; max-width: 1060px; }
+    .detail-page .resources { display: flex; flex-wrap: wrap; gap: 12px 14px; margin-top: 28px; }
+    .detail-page .resource { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--line); padding: 11px 15px; font-size: 13px; font-weight: 550; transition: background .2s, border-color .2s; min-height: 44px; }
+    .detail-page .resource:hover { background: var(--paper); border-color: #999; }
+    .detail-page .resource img { width: 19px; height: 19px; object-fit: contain; filter: grayscale(1); }
+    .detail-page .resource .external { margin-left: 4px; color: #666; font-size: 15px; }
+    .detail-page .resource:not([href]), .detail-page .resource[href=""], .detail-page .resource[href="#"], .detail-page .resource.hidden, .detail-page [hidden] { display: none !important; }
+    .detail-page .resources:not(:has(.resource[href]:not([href=""]):not([href="#"]):not(.hidden):not([hidden]))) { margin-top: 0; }
+    .detail-page .content-band { background: var(--paper); border-block: 1px solid var(--line); padding-block: clamp(32px, 5.5vw, 64px); }
+    .detail-page .content-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: 20px; align-items: start; }
+    .detail-page .card-panel { min-width: 0; background: white; border: 1px solid var(--line); padding: clamp(22px, 3vw, 34px); }
+    .detail-page .card-heading { font: 400 clamp(28px, 3vw, 39px)/1.1 var(--serif); letter-spacing: -.035em; margin-top: 10px; }
+    .detail-page .body-copy { margin-top: 24px; }
+    .detail-page .body-copy > p { color: var(--muted); font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
+    .detail-page .body-copy > p + p { margin-top: 18px; }
+    .detail-page .body-copy > p:empty { display: none; }
+    .detail-page .body-copy a, .detail-page .tech-copy a { text-decoration: underline; text-underline-offset: 3px; }
+    .detail-page .tech { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 21px; }
+    .detail-page .tech:has(#info-tech-stack:empty) { display: none; }
+    .detail-page .tech-copy { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.75; overflow-wrap: anywhere; }
+    .detail-page .video-panel { padding: clamp(16px, 2.3vw, 26px); }
+    .detail-page .video-panel .eyebrow { margin-bottom: 15px; }
+    .detail-page .video-frame { width: 100%; aspect-ratio: 16 / 9; position: relative; background: #181818; overflow: hidden; }
+    .detail-page #project-video { display: block; position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .detail-page .video-panel:has(#project-video[src=""]), .detail-page .video-panel:has(#project-video:not([src])), .detail-page .video-panel:has(#project-video[src="about:blank"]), .detail-page .video-panel:has(#project-video.hidden), .detail-page .video-panel:has(#project-video[hidden]), .detail-page .video-panel.hidden { display: none; }
+    .detail-page .content-grid:not(:has(.video-panel:not(.hidden):not([hidden]) #project-video[src]:not([src=""]):not([src="about:blank"]):not(.hidden):not([hidden]))) { grid-template-columns: minmax(0, 1fr); }
+    .detail-page .content-grid:not(:has(.video-panel:not(.hidden):not([hidden]) #project-video[src]:not([src=""]):not([src="about:blank"]):not(.hidden):not([hidden]))) .body-copy { max-width: 80ch; }
+    .detail-page .bottom { padding-block: 26px clamp(40px, 6vw, 76px); }
+    .detail-page .bottom-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+    .detail-page a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    @media (max-width: 850px) {
+      .detail-page .content-grid { grid-template-columns: minmax(0, 1fr); }
+      .detail-page .body-copy { max-width: 75ch; }
+      .detail-page #project-name { font-size: clamp(38px, 7vw, 62px); }
+    }
+    @media (max-width: 600px) {
+      .detail-page .hero { padding-top: 124px; }
+      .detail-page .hero-top { margin-bottom: 20px; }
+      .detail-page #project-name { font-size: clamp(32px, 8.2vw, 46px); }
+      .detail-page .resources { margin-top: 22px; }
+      .detail-page .body-copy > p { font-size: 15px; line-height: 1.75; }
+    }
+    @media (prefers-reduced-motion: reduce) { body, .detail-page .back span, .detail-page .resource { transition: none; } }
   </style>
 
 </head>
@@ -86,89 +147,60 @@
 
 
   <!-- main body -->
-  <main class="flex-1 max-w-[1920px] w-full px-4 md:px-8 mx-auto mt-28 mb-16">
-
-    <!-- Header -->
-    <div class="mb-7 border-b border-black/10 pb-6">
-      <h1 id="project-name"
-        class="font-serif font-bold text-black tracking-tight text-3xl md:text-4xl lg:text-[44px] leading-tight">
-      </h1>
-
-      <div class="mt-5 flex flex-wrap items-center gap-x-7 gap-y-3">
-
-        <a id="youtube-link" href="" target="_blank"
-          class="group inline-flex items-center gap-2.5 text-sm md:text-[15px] text-neutral-700 hover:text-black transition-colors duration-200">
-          <span class="relative">
-            Project Video on YouTube
-            <span class="absolute left-0 -bottom-1 h-px w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
-          </span>
-          <img src="./assets/icons/youtube.png"
-            class="w-5 md:w-[22px] opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5"
-            alt="">
+  <main class="detail-page">
+    <!-- Project header: content populated by the existing project data loader. -->
+    <header class="hero shell">
+      <div class="hero-top">
+        <p class="eyebrow">Project portfolio / Details</p>
+        <a class="back" href="projects.html"><span aria-hidden="true">&#8592;</span> All projects</a>
+      </div>
+      <h1 id="project-name"></h1>
+      <div class="resources">
+        <a id="youtube-link" class="resource" href="" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/icons/youtube.png" alt="">
+          <span>Watch on YouTube</span><span class="external" aria-hidden="true">&#8599;</span>
         </a>
-
-        <a id="github-link" href="" target="_blank"
-          class="group inline-flex items-center gap-2.5 text-sm md:text-[15px] text-neutral-700 hover:text-black transition-colors duration-200">
-          <span class="relative">
-            Code on GitHub
-            <span class="absolute left-0 -bottom-1 h-px w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
-          </span>
-          <img src="./assets/icons/github.png"
-            class="w-5 md:w-[22px] opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5"
-            alt="">
+        <a id="github-link" class="resource" href="" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/icons/github.png" alt="">
+          <span>Code on GitHub</span><span class="external" aria-hidden="true">&#8599;</span>
         </a>
+      </div>
+    </header>
 
+    <div class="content-band">
+      <div class="shell content-grid">
+        <!-- Information -->
+        <section class="card-panel info-panel" aria-labelledby="overview-heading">
+          <p class="eyebrow">The project</p>
+          <h2 id="overview-heading" class="card-heading">An <em>overview.</em></h2>
+          <div class="body-copy">
+            <p id="info-intro"></p>
+            <p id="info-insight"></p>
+            <div class="tech">
+              <p id="info-tech-stack" class="tech-copy"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Video -->
+        <section class="card-panel video-panel" aria-label="Project video">
+          <p class="eyebrow">Video / Project walkthrough</p>
+          <div class="video-frame">
+            <iframe id="project-video" src="" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </section>
       </div>
     </div>
 
-    <!-- Content -->
-    <div class="flex flex-col lg:flex-row items-stretch gap-6 xl:gap-8">
-
-      <!-- Information -->
-      <section
-        class="group relative flex-1 min-w-0 lg:basis-[46%] border border-black/10 bg-white px-6 py-6 md:px-7 md:py-7 overflow-hidden
-               transition-all duration-300 hover:border-black/20">
-
-        <!-- subtle decorative line -->
-        <div class="absolute left-0 top-0 h-full w-[2px] bg-black scale-y-0 origin-top transition-transform duration-500 group-hover:scale-y-100"></div>
-
-        <div class="relative">
-          <p id="info-intro"
-            class="text-neutral-700 leading-7 md:leading-8 text-[15px] md:text-base mb-5">
-          </p>
-
-          <p id="info-insight"
-            class="text-neutral-700 leading-7 md:leading-8 text-[15px] md:text-base mb-6">
-          </p>
-
-          <div class="border-t border-black/10 pt-5">
-            <p id="info-tech-stack"
-              class="text-neutral-950 leading-7 text-[15px] md:text-base font-semibold">
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Video -->
-      <section
-        class="group relative flex-1 min-w-0 lg:basis-[54%] border border-black/10 bg-neutral-50 p-2 md:p-3
-               transition-all duration-300 hover:border-black/25">
-
-        <div class="relative w-full h-full min-h-[280px] md:min-h-[320px] lg:min-h-[360px] overflow-hidden bg-black">
-          <iframe id="project-video"
-            class="absolute inset-0 w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.005]"
-            src=""
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-      </section>
-
-    </div>
-
+    <footer class="bottom shell">
+      <div class="bottom-inner">
+        <a class="back" href="projects.html"><span aria-hidden="true">&#8592;</span> Back to all projects</a>
+        <p class="eyebrow">Research / Engineering / Software</p>
+      </div>
+    </footer>
   </main>
 
 

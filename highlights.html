@@ -18,6 +18,96 @@
     body.loaded {
       opacity: 1;
     }
+
+    /* Highlights page — editorial system shared with Home, Skills and Projects. */
+    .highlights-page {
+      --ink: #171717; --muted: #525252; --line: #deddd9;
+      --serif: Georgia, 'Times New Roman', serif;
+      width: 100%; color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .highlights-page *, .highlights-page *::before, .highlights-page *::after { box-sizing: border-box; }
+    .highlights-page h1, .highlights-page h2, .highlights-page h3, .highlights-page p, .highlights-page dl, .highlights-page dd { margin: 0; }
+    .highlights-page .shell { width: min(100%, 1152px); margin-inline: auto; padding-inline: clamp(24px, 4vw, 40px); }
+    .highlights-page .eyebrow { font-size: 11px; font-weight: 550; letter-spacing: .19em; text-transform: uppercase; color: #656565; line-height: 1.6; }
+    .highlights-page .hero { padding-top: clamp(136px, 13vw, 190px); padding-bottom: clamp(42px, 5.5vw, 72px); }
+    .highlights-page .hero-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+    .highlights-page .hero-note { letter-spacing: .07em; }
+    .highlights-page .hero-grid { display: grid; grid-template-columns: minmax(0, 1.95fr) minmax(0, 1fr); align-items: end; gap: clamp(24px, 4vw, 56px); }
+    .highlights-page .hero-title { font: 400 clamp(48px, 7vw, 98px)/.98 var(--serif); letter-spacing: -.06em; }
+    .highlights-page em { font-weight: 400; }
+    .highlights-page .intro { padding-bottom: 3px; font-size: clamp(16px, 1.55vw, 19px); line-height: 1.65; color: var(--muted); }
+    .highlights-page .section { padding-block: clamp(46px, 6.4vw, 82px); }
+    .highlights-page .education { background: #f8f8f6; border-block: 1px solid var(--line); }
+    .highlights-page .section-head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 24px 56px; align-items: end; margin-bottom: clamp(28px, 4vw, 42px); }
+    .highlights-page .section-head h2 { font: 400 clamp(36px, 4.25vw, 59px)/1.06 var(--serif); letter-spacing: -.045em; margin-top: 12px; }
+    .highlights-page .description { font-size: 16px; line-height: 1.7; color: var(--muted); }
+    .highlights-page .card { min-width: 0; border: 1px solid var(--line); background: #fff; padding: clamp(22px, 3vw, 34px); }
+    .highlights-page .degree { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px 38px; align-items: center; }
+    .highlights-page .degree h3 { font: 400 clamp(28px, 3.3vw, 43px)/1.1 var(--serif); letter-spacing: -.035em; margin-top: 12px; }
+    .highlights-page .degree .description { margin-top: 14px; }
+    .highlights-page .degree-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; border-left: 1px solid var(--line); padding-left: 30px; }
+    .highlights-page .degree-stats dd { font: 400 clamp(38px, 5vw, 66px)/1 var(--serif); letter-spacing: -.06em; margin-top: 10px; font-variant-numeric: lining-nums tabular-nums; }
+    .highlights-page .degree-stats .unit { display: block; font: 400 13px/1.55 ui-sans-serif, system-ui, sans-serif; letter-spacing: 0; color: var(--muted); margin-top: 7px; }
+    .highlights-page .earlier-label { margin: 28px 0 14px; }
+    .highlights-page .two-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .highlights-page .school { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
+    .highlights-page .item-title { font: 400 clamp(24px, 2.4vw, 32px)/1.14 var(--serif); letter-spacing: -.025em; margin-top: 10px; }
+    .highlights-page .school .gpa { font-size: 13px; color: var(--muted); }
+    .highlights-page .school .gpa strong { font: 400 28px/1 var(--serif); color: var(--ink); letter-spacing: -.03em; margin-inline: 5px; }
+    .highlights-page .award-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+    .highlights-page .deans { grid-row: span 2; display: flex; flex-direction: column; }
+    .highlights-page .award-count { display: flex; align-items: center; gap: 15px; margin-top: 21px; margin-bottom: 20px; }
+    .highlights-page .award-count strong { font: 400 64px/.95 var(--serif); letter-spacing: -.05em; }
+    .highlights-page .award-count span { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .highlights-page .terms { list-style: none; padding: 0; margin: auto 0 0; }
+    .highlights-page .terms li { border-top: 1px solid var(--line); padding-block: 12px; font-size: 14px; }
+    .highlights-page .terms li:last-child { padding-bottom: 0; }
+    .highlights-page .award-grid .description { font-size: 15px; margin-top: 12px; }
+    .highlights-page .community { border-block: 1px solid var(--line); background: #f8f8f6; }
+    .highlights-page .community-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .highlights-page .community-grid article { display: flex; flex-direction: column; }
+    .highlights-page .community-grid .description { font-size: 15px; margin-top: 12px; }
+    .highlights-page .date { margin-top: auto; padding-top: 24px; color: var(--muted); font-size: 13px; }
+    .highlights-page .closing { padding-block: clamp(40px, 5.8vw, 76px); }
+    .highlights-page .language-panel { background: #181818; color: white; padding: clamp(28px, 4.5vw, 56px); }
+    .highlights-page .language-panel .eyebrow { color: #c2c2c2; }
+    .highlights-page .language-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); align-items: center; gap: 24px 45px; }
+    .highlights-page .language-heading { display: flex; align-items: center; gap: 24px; justify-content: space-between; }
+    .highlights-page .language-heading h2 { font: 400 clamp(28px, 3vw, 41px)/1.08 var(--serif); letter-spacing: -.035em; margin-top: 9px; }
+    .highlights-page .overall { text-align: right; flex: none; }
+    .highlights-page .overall dd { font: 400 60px/1 var(--serif); letter-spacing: -.055em; }
+    .highlights-page .overall > div { display: flex; flex-direction: column; }
+    .highlights-page .overall dt { order: 1; font-size: 12px; color: #c2c2c2; margin-top: 5px; }
+    .highlights-page .scores { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .highlights-page .scores > div { border-left: 1px solid #515151; padding-left: 14px; }
+    .highlights-page .scores dt { color: #d1d1d1; font-size: 12px; }
+    .highlights-page .scores dd { font: 400 32px/1.1 var(--serif); margin-top: 8px; letter-spacing: -.04em; font-variant-numeric: lining-nums tabular-nums; }
+    @media (max-width: 900px) {
+      .highlights-page .hero-grid, .highlights-page .section-head, .highlights-page .language-grid { grid-template-columns: 1fr; gap: 24px; }
+      .highlights-page .hero-title { font-size: clamp(46px, 10.4vw, 92px); }
+      .highlights-page .intro { max-width: 580px; }
+      .highlights-page .section-head .description { max-width: 65ch; }
+      .highlights-page .language-heading { justify-content: flex-start; gap: 32px; }
+      .highlights-page .overall { text-align: left; }
+      .highlights-page .community-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .highlights-page .community-grid article:last-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 700px) {
+      .highlights-page .degree { grid-template-columns: 1fr; }
+      .highlights-page .degree-stats { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 20px; }
+    }
+    @media (max-width: 600px) {
+      .highlights-page .hero { padding-top: 124px; }
+      .highlights-page .hero-top { gap: 8px; margin-bottom: 22px; }
+      .highlights-page .hero-title { font-size: clamp(40px, 10.7vw, 64px); }
+      .highlights-page .two-grid, .highlights-page .award-grid, .highlights-page .community-grid { grid-template-columns: 1fr; }
+      .highlights-page .deans { grid-row: auto; }
+      .highlights-page .scores { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+      .highlights-page .language-heading { gap: 16px; justify-content: space-between; }
+      .highlights-page .overall dd { font-size: 48px; }
+    }
+    @media (prefers-reduced-motion: reduce) { body { transition: none; } }
   </style>
 
 </head>
@@ -86,183 +176,121 @@
 
 
   <!-- main body -->
-  <main class="flex-1 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mt-28 mb-20">
+  <main class="highlights-page">
+    <!-- Introduction -->
+    <section class="hero shell" aria-labelledby="highlights-title">
+      <div class="hero-top">
+        <p class="eyebrow">Highlights</p>
+        <p class="eyebrow hero-note">Education &nbsp;/&nbsp; Recognition &nbsp;/&nbsp; Community</p>
+      </div>
+      <div class="hero-grid">
+        <h1 id="highlights-title" class="hero-title">Education &amp;<br><em>highlights.</em></h1>
+        <p class="intro">A look at my academic journey, the recognition I have received, and my experiences teaching, mentoring and volunteering.</p>
+      </div>
+    </section>
 
-    <header class="mb-10 md:mb-12 border-b border-black/15 pb-7">
-      <h1 class="font-serif font-semibold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-black">Highlights</h1>
-    </header>
-
-    <section aria-labelledby="education-heading" class="mb-14">
-      <h2 id="education-heading" class="font-serif text-2xl sm:text-3xl tracking-tight text-black mb-5">Education</h2>
-
-      <article class="group mb-14 border border-black/15 bg-white p-6 sm:p-8 md:p-10
-                      transition-colors duration-300 hover:border-black/35">
-        <div class="flex items-start justify-between gap-6 mb-8">
+    <!-- Education -->
+    <section class="section education" aria-labelledby="education-heading">
+      <div class="shell">
+        <header class="section-head">
+          <div><p class="eyebrow">Education</p><h2 id="education-heading">Academic <em>record.</em></h2></div>
+          <p class="description">My undergraduate studies in computer science and engineering, and the education that preceded them.</p>
+        </header>
+        <article class="card degree">
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-neutral-500 mb-3">Undergraduate</p>
-            <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl tracking-tight text-black">
-              B.Sc. in Computer Science & Engineering
-            </h3>
-            <p class="mt-3 text-base sm:text-lg text-neutral-700">
-              American International University-Bangladesh
-            </p>
+            <p class="eyebrow">Undergraduate</p>
+            <h3>B.Sc. in Computer Science &amp; Engineering</h3>
+            <p class="description">American International University-Bangladesh</p>
           </div>
-          <span
-            class="hidden sm:block text-4xl font-serif text-black/15 transition-colors duration-300 group-hover:text-black/30">01</span>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 border-t border-black/10 pt-7">
-          <div>
-            <p class="text-xs uppercase tracking-[0.16em] text-neutral-500 mb-2">CGPA</p>
-            <p class="font-serif text-3xl sm:text-4xl text-black">3.94</p>
-            <p class="text-sm text-neutral-500 mt-1">out of 4.00</p>
-          </div>
-
-          <div>
-            <p class="text-xs uppercase tracking-[0.16em] text-neutral-500 mb-2">Credits</p>
-            <p class="font-serif text-3xl sm:text-4xl text-black">132</p>
-            <p class="text-sm text-neutral-500 mt-1">of 148 completed</p>
-          </div>
-
-          <div class="col-span-2 md:col-span-1">
-            <p class="text-xs uppercase tracking-[0.16em] text-neutral-500 mb-2">Focus</p>
-            <p class="text-base leading-7 text-neutral-800">
-              Computer Science and Engineering
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Earlier Education -->
-      <div>
-        <div class="flex items-end justify-between gap-6 mb-5">
-          <h3 class="font-serif text-2xl sm:text-3xl tracking-tight text-black">Earlier Education</h3>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 border-y border-black/15 md:divide-x divide-black/15">
-          <article class="group py-7 md:pr-8 md:py-8">
-            <div class="flex items-start justify-between gap-5">
-              <div>
-                <p class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">
-                  Secondary School Certificate
-                </p>
-                <h4 class="font-serif text-xl sm:text-2xl text-black">
-                  Monipur High School and College
-                </h4>
-                <p class="mt-4 text-sm sm:text-base text-neutral-600">
-                  GPA <span class="font-medium text-black">5.00</span> out of 5.00
-                </p>
-              </div>
-              <span
-                class="text-2xl font-serif text-black/15 transition-colors duration-300 group-hover:text-black/35">02</span>
-            </div>
+          <dl class="degree-stats">
+            <div><dt class="eyebrow">CGPA</dt><dd>3.94<span class="unit">out of 4.00</span></dd></div>
+            <div><dt class="eyebrow">Credits</dt><dd>132<span class="unit">of 148 completed</span></dd></div>
+          </dl>
+        </article>
+        <p class="eyebrow earlier-label">Earlier education</p>
+        <div class="two-grid">
+          <article class="card school">
+            <div><p class="eyebrow">Secondary School Certificate</p><h3 class="item-title">Monipur High School and College</h3></div>
+            <p class="gpa">GPA <strong>5.00</strong> out of 5.00</p>
           </article>
-
-          <article class="group py-7 md:pl-8 md:py-8 border-t border-black/15 md:border-t-0">
-            <div class="flex items-start justify-between gap-5">
-              <div>
-                <p class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">
-                  Higher Secondary School Certificate
-                </p>
-                <h4 class="font-serif text-xl sm:text-2xl text-black">
-                  Birsreshtha Noor Mohammad Public College
-                </h4>
-                <p class="mt-4 text-sm sm:text-base text-neutral-600">
-                  GPA <span class="font-medium text-black">5.00</span> out of 5.00
-                </p>
-              </div>
-              <span
-                class="text-2xl font-serif text-black/15 transition-colors duration-300 group-hover:text-black/35">03</span>
-            </div>
+          <article class="card school">
+            <div><p class="eyebrow">Higher Secondary School Certificate</p><h3 class="item-title">Birsreshtha Noor Mohammad Public College</h3></div>
+            <p class="gpa">GPA <strong>5.00</strong> out of 5.00</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="mb-14" aria-labelledby="awards-heading">
-      <h2 id="awards-heading" class="font-serif text-2xl sm:text-3xl tracking-tight text-black mb-5">Awards</h2>
-      <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
-        <article class="group lg:col-span-4 bg-black text-white p-6 sm:p-8 md:p-10">
-          <div class="flex items-start justify-between gap-4 mb-8">
-            <div>
-              <p class="text-xs uppercase tracking-[0.2em] text-white/55 mb-3">Recognition</p>
-              <h3 class="font-serif text-2xl sm:text-3xl tracking-tight">Dean’s List</h3>
-            </div>
-            <span class="hidden sm:block text-4xl font-serif text-white/15">04</span>
-          </div>
-
-          <div class="divide-y divide-white/15 border-y border-white/15">
-            <div class="py-4 flex items-center justify-between gap-4">
-              <span class="text-sm sm:text-base text-white/90">Spring 2022–23</span>
-              <span class="text-xs uppercase tracking-[0.15em] text-white/45">Award</span>
-            </div>
-            <div class="py-4 flex items-center justify-between gap-4">
-              <span class="text-sm sm:text-base text-white/90">Fall 2023–24</span>
-              <span class="text-xs uppercase tracking-[0.15em] text-white/45">Award</span>
-            </div>
-            <div class="py-4 flex items-center justify-between gap-4">
-              <span class="text-sm sm:text-base text-white/90">Fall 2024–25</span>
-              <span class="text-xs uppercase tracking-[0.15em] text-white/45">Award</span>
-            </div>
-          </div>
+    <!-- Awards -->
+    <section class="section shell" aria-labelledby="awards-heading">
+      <header class="section-head">
+        <div><p class="eyebrow">Recognition</p><h2 id="awards-heading">Awards &amp; <em>honors.</em></h2></div>
+        <p class="description">Recognition for academic performance and an early achievement in a technical project showcase.</p>
+      </header>
+      <div class="award-grid">
+        <article class="card deans">
+          <p class="eyebrow">Academic distinction</p>
+          <h3 class="item-title">Dean’s List</h3>
+          <div class="award-count"><strong>3</strong><span>Dean’s List<br>recognitions</span></div>
+          <ul class="terms"><li>Spring 2022–23</li><li>Fall 2023–24</li><li>Fall 2024–25</li></ul>
         </article>
-        <div class="grid border-y border-black/15 divide-y divide-black/15 lg:col-span-8 lg:grid-rows-2">
-          <article class="flex flex-col justify-center py-6 md:py-7">
-            <p class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">Fall 2023 – Fall 2024</p>
-            <h3 class="font-serif text-xl sm:text-2xl text-black">Academic Scholarship</h3>
-            <p class="mt-3 text-base leading-7 text-neutral-700">American International University-Bangladesh</p>
+        <article class="card">
+          <p class="eyebrow">Fall 2023 – Fall 2024</p>
+          <h3 class="item-title">Academic Scholarship</h3>
+          <p class="description">American International University-Bangladesh</p>
+        </article>
+        <article class="card">
+          <p class="eyebrow">BNMPC IT Fest 2020</p>
+          <h3 class="item-title">3rd Place in the Project Showcase</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- Teaching, mentoring and volunteering -->
+    <section class="section community" aria-labelledby="community-heading">
+      <div class="shell">
+        <header class="section-head">
+          <div><p class="eyebrow">Beyond academics</p><h2 id="community-heading">Teaching &amp; <em>community.</em></h2></div>
+          <p class="description">Alongside my studies, I have taught high school mathematics, mentored undergraduate students and contributed to student-led activities.</p>
+        </header>
+        <div class="community-grid">
+          <article class="card">
+            <p class="eyebrow">Teaching</p>
+            <h3 class="item-title">Mathematics</h3>
+            <p class="description">Taught mathematics to high school students.</p>
+            <p class="date">2024–2026</p>
           </article>
-          <article class="flex flex-col justify-center py-6 md:py-7">
-            <p class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">BNMPC IT Fest 2020</p>
-            <h3 class="font-serif text-xl sm:text-2xl text-black">3rd Place in the Project Showcase</h3>
+          <article class="card">
+            <p class="eyebrow">Mentoring</p>
+            <h3 class="item-title">Undergraduate Mentoring</h3>
+            <p class="description">Mentored undergraduate students in programming and machine learning.</p>
+            <p class="date">2025–2026</p>
+          </article>
+          <article class="card">
+            <p class="eyebrow">Volunteering</p>
+            <h3 class="item-title">BNMPC IT Club</h3>
+            <p class="description">Volunteered and helped host BNMPC IT Fest in 2020.</p>
+            <p class="date">2019–2021</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="mb-14" aria-labelledby="teaching-heading">
-      <h2 id="teaching-heading" class="font-serif text-2xl sm:text-3xl tracking-tight text-black mb-5">Teaching and Mentoring</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 border-y border-black/15 md:divide-x divide-black/15">
-        <article class="py-7 md:pr-8 md:py-8">
-          <p class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">2024–2026</p>
-          <h3 class="font-serif text-xl sm:text-2xl text-black">Teaching</h3>
-          <p class="mt-3 text-base leading-7 text-neutral-700">Taught mathematics to high school students.</p>
-        </article>
-        <article class="py-7 md:pl-8 md:py-8 border-t border-black/15 md:border-t-0">
-          <p class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">2025–2026</p>
-          <h3 class="font-serif text-xl sm:text-2xl text-black">Undergraduate Mentoring</h3>
-          <p class="mt-3 text-base leading-7 text-neutral-700">
-            Mentored undergraduate students in programming and machine learning.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="mb-14" aria-labelledby="volunteering-heading">
-      <h2 id="volunteering-heading" class="font-serif text-2xl sm:text-3xl tracking-tight text-black mb-5">Volunteering</h2>
-      <article class="border-y border-black/15 py-7 md:py-8">
-        <p class="text-xs uppercase tracking-[0.18em] text-neutral-500 mb-3">2019–2021</p>
-        <h3 class="font-serif text-xl sm:text-2xl text-black">BNMPC IT Club</h3>
-        <p class="mt-3 text-base leading-7 text-neutral-700">Volunteered and helped host BNMPC IT Fest in 2020.</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="english-heading">
-      <h2 id="english-heading" class="font-serif text-2xl sm:text-3xl tracking-tight text-black mb-5">English Proficiency</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 border-y border-black/15 md:divide-x divide-black/15">
-        <div class="py-7 md:pr-8 md:py-8">
-          <h3 class="font-serif text-xl sm:text-2xl text-black">IELTS Academic</h3>
-          <p class="mt-3 text-neutral-700">Overall band <strong class="ml-1 font-serif text-3xl font-normal text-black">8.0</strong></p>
+    <!-- English proficiency -->
+    <section class="closing shell" aria-labelledby="english-heading">
+      <div class="language-panel language-grid">
+        <div class="language-heading">
+          <div><p class="eyebrow">English proficiency</p><h2 id="english-heading">IELTS <em>Academic.</em></h2></div>
+          <dl class="overall"><div><dt>Overall band</dt><dd>8.0</dd></div></dl>
         </div>
-        <dl class="md:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-6 py-7 md:pl-8 md:py-8 border-t border-black/15 md:border-t-0">
-          <div><dt class="text-sm text-neutral-600">Listening</dt><dd class="mt-2 font-serif text-2xl text-black">9.0</dd></div>
-          <div><dt class="text-sm text-neutral-600">Reading</dt><dd class="mt-2 font-serif text-2xl text-black">8.0</dd></div>
-          <div><dt class="text-sm text-neutral-600">Writing</dt><dd class="mt-2 font-serif text-2xl text-black">7.0</dd></div>
-          <div><dt class="text-sm text-neutral-600">Speaking</dt><dd class="mt-2 font-serif text-2xl text-black">8.5</dd></div>
+        <dl class="scores">
+          <div><dt>Listening</dt><dd>9.0</dd></div>
+          <div><dt>Reading</dt><dd>8.0</dd></div>
+          <div><dt>Writing</dt><dd>7.0</dd></div>
+          <div><dt>Speaking</dt><dd>8.5</dd></div>
         </dl>
       </div>
     </section>
-
   </main>
 
 
